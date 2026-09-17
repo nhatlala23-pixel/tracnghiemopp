@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Bookmark, HelpCircle } from 'lucide-react';
 import AnswerOption from './AnswerOption';
 import Badge from '../common/Badge';
+import FormattedQuestion from './FormattedQuestion';
 
 export const QuestionCard = ({
   question,
@@ -90,12 +91,10 @@ export const QuestionCard = ({
 
       {/* Question Content */}
       <div className="my-6">
-        <h2 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white leading-relaxed">
-          <span className="text-blue-600 dark:text-blue-400 font-black mr-2">
-            Câu {questionNumber}:
-          </span>
-          {question.question}
-        </h2>
+        <FormattedQuestion
+          questionText={question.question}
+          questionNumber={questionNumber}
+        />
       </div>
 
       {/* Answer Options Grid */}
