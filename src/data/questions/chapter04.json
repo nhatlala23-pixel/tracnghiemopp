@@ -1,0 +1,482 @@
+[
+  {
+    "id": "CH4-Q001",
+    "chapter": 4,
+    "questionNumber": 1,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass Shape {\npublic:\n    virtual void draw() {\n        cout << \"Drawing a shape\" << endl;\n    }\n};\nclass Circle : public Shape {\npublic:\n    void draw() override {\n        cout << \"Drawing a circle \";\n    }\n};\nclass Square : public Shape {\npublic:\n    void draw() override {\n        cout << \"Drawing a square \";\n    }\n};\nint main() {\n    Shape* shape1 = new Circle();\n    Shape* shape2 = new Square();\n    shape1->draw();\n    shape2->draw();\n    delete shape1;\n    delete shape2;\n    return 0;\n}",
+    "options": {
+      "A": "Drawing a circle",
+      "B": "Drawing a square",
+      "C": "Drawing a circle Drawing a square",
+      "D": "Drawing a square Drawing a circle"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH4-Q002",
+    "chapter": 4,
+    "questionNumber": 2,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass Polygon {\nprotected:\n    int width, height;\npublic:\n    Polygon(int a);\n    void  setValues(int a, int b);\n};\nPolygon::Polygon(int a){\n    width = a;\n}\nvoid Polygon::setValues(int a, int b){\n    width = a;\n    height = b;\n}\nclass Rectangle : public Polygon {\npublic:\n    Rectangle(int w, int h);\n    int area();\n};\nRectangle::Rectangle(int w, int h) :Polygon(h){\n    height = h;\n}\nint Rectangle::area(){\n    return (width * height);\n}\nint main() {\n    Rectangle rect(8, 9);\n    cout << rect.area() << endl;\n    return 0;\n}",
+    "options": {
+      "A": "17",
+      "B": "81",
+      "C": "8",
+      "D": "72"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH4-Q003",
+    "chapter": 4,
+    "questionNumber": 3,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, lớp Polygon có đặc điểm gì?\nclass Polygon {\nprotected:\n    int width, height;\npublic:\n    void setValues(int a, int b);\n    virtual int area()=0;\n};\nvoid Polygon::setValues(int a, int b){\n    width = a;\n    height = b;\n}\nclass Rectangle : public Polygon {\npublic:\n    int area();\n};\nint Rectangle::area(){\n    return (width * height);\n}\nclass Triangle : public Polygon {\npublic:\n    int area();\n};\nint Triangle::area(){\n    return (width * height / 2);\n}\nint main() {\n    Rectangle rect;\n    Triangle trgl;\n    rect.setValues(4, 5);\n    trgl.setValues(4, 5);\n    cout << \"Rectangle area:\" << rect.area() << \" Triangle area:\" << trgl.area() << endl;\n    return 0;\n}",
+    "options": {
+      "A": "Lớp trừu tượng (abstract classes)",
+      "B": "Lớp đa kế thừa",
+      "C": "Lớp mẫu (Template Classes)",
+      "D": "Các đáp sản đều sai"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH4-Q004",
+    "chapter": 4,
+    "questionNumber": 4,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass A{\npublic:\n    void x(){\n        cout << \"I am ax...\";\n    }\n};\nclass B : public A{\npublic:\n    void x(){\n        cout << \"I am bx...\";\n    }\n    void y(){\n        cout << \"I am by...\";\n    }\n};\nvoid show(A *a) {\n    a->x();\n}\nvoid main() {\n    A *a = new A();\n    show(a);\n    B *b = new B();\n    show(b);\n}",
+    "options": {
+      "A": "I am ax...I am ax...",
+      "B": "I am ax...I am bx...",
+      "C": "I am bx...I am bx...",
+      "D": "I am bx...I am ax..."
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH4-Q005",
+    "chapter": 4,
+    "questionNumber": 5,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass A{\npublic:\n    void x(){\n        cout << \"I am ax...\";\n    }\n};\nclass B : public A{\npublic:\n    void x(){\n        cout << \"I am bx...\";\n    }\n    void y(){\n        cout << \"I am by...\";\n    }\n};\nvoid show(A *a){\n    a->x();\n}\nvoid main(){\n    A *a = new A();\n    show(a);\n    B *b = new B();\n    show(b);\n}",
+    "options": {
+      "A": "I am ax...I am ax...",
+      "B": "I am ax...I am bx...",
+      "C": "I am bx...I am bx...",
+      "D": "I am bx...I am ax..."
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH4-Q006",
+    "chapter": 4,
+    "questionNumber": 6,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass A{\npublic:\n    virtual void x(){\n        cout << \"I am Ax...\";\n    }\n    void m(){\n        cout << \"I am Am...\";\n        x();\n    }\n};\nclass B : public A{\npublic:\n    void x(){\n        cout << \"I am Bx...\";\n    }\n    void y(){\n        cout << \"I am By...\";\n        m();\n    }\n};\nvoid main()\n{\n    B *b = new B();\n    b->y();\n}",
+    "options": {
+      "A": "I am By...I am Am...I am Bx...",
+      "B": "I am By...I am Ax...I am Bx...",
+      "C": "I am By...I am Bx...",
+      "D": "I am By...I am Bm..."
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH4-Q007",
+    "chapter": 4,
+    "questionNumber": 7,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass A{\npublic:\n    void x(){\n        cout << \"I am Ax...\";\n    }\n    void m(){\n        cout << \"I am Am...\";\n        x();\n    }\n};\nclass B : public A{\npublic:\n    void x(){\n        cout << \"I am Bx...\";\n    }\n    void y(){\n        cout << \"I am By...\";\n        m();\n    }\n};\nvoid main()\n{\n    B *b = new B();\n    b->y();\n}",
+    "options": {
+      "A": "I am By...I am Am...I am Bx...",
+      "B": "I am By...I am Am...I am Ax...",
+      "C": "I am By...I am Bx...",
+      "D": "I am By...I am Bm..."
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH4-Q008",
+    "chapter": 4,
+    "questionNumber": 8,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass Vehicle {\npublic:\n    double speed;\n    double mass;\n    double kineticEnergy() {\n        return 0.5 * mass * speed * speed;\n    }\n};\nclass Plane : public Vehicle {\npublic:\n    double altitude;\n    double totalEnergy() {\n        return kineticEnergy() + mass * altitude;\n    }\n};\nbool nonNullEnergy(Vehicle v) {\n    return v.kineticEnergy() != 0.0;\n}\nint main(int argc, char **argv) {\n    Plane p;\n    p.speed = 150.0; \n    p.mass = 1500.0; \n    p.altitude = 1300;\n    if (nonNullEnergy(p)) \n        cout << \"There is some energy.\\n\";\n    else\n        cout << \"There is not energy.\\n\";\n}",
+    "options": {
+      "A": "There is some energy",
+      "B": "There is not energy",
+      "C": "Lỗi biên dịch do khai báo kế thừa sai",
+      "D": "Lỗi thực thi tại p.speed = 150.0; do đối tượn p chưa được cấp phát vùng nhớ"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH4-Q009",
+    "chapter": 4,
+    "questionNumber": 9,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass A {\npublic:\n    void dummy() { \n        cout << \"A::dummy...\"; \n    }\n};\nclass B : public A {\npublic:\n    void dummy() { \n        cout << \"B::dummy...\"; \n    }\n};\nvoid callAsA(A x) { \n    x.dummy(); \n}\nint main(int argc, char **argv) {\n    B b;\n    b.dummy();\n    callAsA(b);\n}",
+    "options": {
+      "A": "A::dummy...B::dummy...",
+      "B": "B::dummy...A::dummy...",
+      "C": "A::dummy",
+      "D": "B::dummy"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH4-Q010",
+    "chapter": 4,
+    "questionNumber": 10,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass FirstClass {\npublic:\n    void something() {\n        cout << \"FirstClass::something()...\"; \n    }\n};\nclass SecondClass : public FirstClass {\npublic:\n    void something() { \n        cout << \"SecondClass::something()...\";\n    }\n};\nvoid niceFunction(FirstClass y) {\n    y.something(); \n}\nint main(int argc, char **argv) {\n    SecondClass x;\n    x.something(); \n    niceFunction(x); \n}",
+    "options": {
+      "A": "SecondClass::something()...FirstClass::something()...",
+      "B": "FirstClass::something()...SecondClass::something()...",
+      "C": "SecondClass::something()...",
+      "D": "FirstClass::something()..."
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH4-Q011",
+    "chapter": 4,
+    "questionNumber": 11,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass AA {\npublic:\n    virtual void something() { \n        cout << \"AA:something()...\"; \n    }\n};\nclass BB : public AA {\npublic:\n    void something() {\n        cout << \"BB:something()...\"; \n    }\n};\nvoid byvalue(AA x) {\n    x.something(); \n}\nvoid byref(AA &x) { \n    x.something(); \n}\nvoid bypointer(AA *x) {\n    x->something();\n}\nint main(int argc, char **argv) {\n    BB b;\n    byvalue(b);\n    byref(b);\n    bypointer(&b);\n}",
+    "options": {
+      "A": "AA:something()...BB:something()...BB:something()...",
+      "B": "AA:something()...BB:something()...",
+      "C": "AA:something()...",
+      "D": "BB:something()..."
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH4-Q012",
+    "chapter": 4,
+    "questionNumber": 12,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass Function {\npublic: \n    virtual double eval(double x) = 0;  \n    double cal(double x, double y) {\n        return (eval(x + y));\n    }\n};\nclass Oscillating : public Function {\n    double a, b, c;\npublic:\n    Oscillating(double aa, double bb, double cc) : a(aa), b(bb), c(cc) {\n    }\n    double eval(double x) { \n        return x+a+b+c; \n    }\n};\nint main(int argc, char *argv) {\n    Oscillating f(1, 2, 3);\n    cout << f.cal(2, 3);\n}",
+    "options": {
+      "A": "2",
+      "B": "10",
+      "C": "11",
+      "D": "5"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH4-Q013",
+    "chapter": 4,
+    "questionNumber": 13,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\ntemplate <class T> \nclass Calc{\npublic:\n    T multiply(T x, T y);\n    T add(T x, T y);\n};\ntemplate <class T> \nT Calc<T>::multiply(T x, T y){\n    return x*y;\n}\ntemplate <class T> \nT Calc<T>::add(T x, T y){\n    return x + y;\n}\nint main () {\n    Calc<int> v;\n    Calc<float> u;\n    cout << v.add(5, 6)<<\"...\"<<u.multiply(2.0, 5.0);\n}",
+    "options": {
+      "A": "5...6",
+      "B": "11...10",
+      "C": "10...11",
+      "D": "Lỗi biên dịch do khai báo lớp mẫu sai"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH4-Q014",
+    "chapter": 4,
+    "questionNumber": 14,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass A{\npublic:\n    A()  { \n        cout << \"A's constructor...\";\n    }\n};\nclass B{\npublic:\n    B()  { \n        cout << \"B's constructor...\"; \n    }\n};\nclass C : public B, public A {\npublic:\n    C()  { \n        cout << \"C's constructor...\";\n    }\n};\nint main(){\n    C c;\n    return 0;\n}",
+    "options": {
+      "A": "B's constructor...A's constructor...C's constructor...",
+      "B": "B's constructor...",
+      "C": "A's constructor...B's constructor...C's constructor...",
+      "D": "A's constructor...B's constructor..."
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH4-Q015",
+    "chapter": 4,
+    "questionNumber": 15,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass USBDevice\n{\nprivate:\n    long id;\npublic:\n    USBDevice(long pid) : id(pid){\n    }\n    long getID() { \n        return id; \n    }\n};\nclass NetworkDevice {\nprivate:\n    long id;\npublic:\n    NetworkDevice(long pid) : id(pid){\n    }\n    long getID() { \n        return id; \n    }\n};\nclass WirelessAdaptor : public USBDevice, public NetworkDevice{\npublic:\n    WirelessAdaptor(long uid, long nid) : USBDevice(uid), NetworkDevice(nid)\n    {\n    }\n};\nint main(){\n    WirelessAdaptor w(123, 456);\n    cout << w.getID(); \n    return 0;\n}",
+    "options": {
+      "A": "123",
+      "B": "456.",
+      "C": "123...456",
+      "D": "Lỗi biên dịch tại cout << w.getID();"
+    },
+    "correctAnswer": "D",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH4-Q016",
+    "chapter": 4,
+    "questionNumber": 16,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì? \nclass Human {\nprivate:\n   string nameC;\npublic:\n   Human(const string & name) : nameC(name) { }\n   string name() const { return nameC; }\n   void talkTo(const Human & person) const {\n      cout << nameC << \" Hello, \" << person.name() << \"!\" << \"...\";\n   }\n};\nint main() {\n   Human ha(\"Nguyen Ha\");\n   Human tuan(\"Nguyen Anh Tuan\");\n   ha.talkTo(tuan);\n   tuan.talkTo(ha);\n   return 0;\n}",
+    "options": {
+      "A": "Nguyen Ha Hello, Nguyen Anh Tuan!...Nguyen Anh Tuan Hello, Nguyen Ha!...",
+      "B": "Nguyen Ha Hello, Nguyen Anh Tuan!...",
+      "C": "Nguyen Anh Tuan Hello, Nguyen Ha!...Nguyen Ha Hello, Nguyen Anh Tuan!...",
+      "D": "Nguyen Anh Tuan Hello, Nguyen Ha!..."
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH4-Q017",
+    "chapter": 4,
+    "questionNumber": 17,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì? \nclass Animal{\npublic:\n    Animal(){\n        cout << \"Animal constructor...\";\n    }\n    void walk(){\n        cout << \"Animal walks...\";\n    }\n};\nclass Tiger : public Animal{\npublic:\n    Tiger(){\n        cout << \"Tiger constructor ...\";\n    }\n};\nclass Lion : public Animal{\npublic:\n    Lion(){\n        cout << \"Lion constructor...\" ;\n    }\n};\nclass Liger : public Tiger, public Lion{\npublic:\n    Liger(){\n        cout << \"Liger constructor...\" ;\n    }\n};\nint main()\n{\n    Liger anil;\n    anil.Animal::walk();\n    return 0;\n}",
+    "options": {
+      "A": "Animal constructor...Tiger constructor...Animal constructor...Lion constructor...Liger constructor...Animal walks...",
+      "B": "Animal constructor...Tiger constructor...Animal constructor...",
+      "C": "Animal constructor...Lion constructor...Liger constructor...Animal walks...",
+      "D": "Tiger constructor...Animal constructor...Lion constructor...Liger constructor..."
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH4-Q018",
+    "chapter": 4,
+    "questionNumber": 18,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass Animal{\npublic:\n    Animal(){\n        cout << \"Animal constructor...\";\n    }\n    void walk(){\n        cout << \"Animal walks...\";\n    }\n};\nclass Tiger : virtual public Animal{\npublic:\n    Tiger(){\n        cout << \"Tiger constructor ...\";\n    }\n};\nclass Lion : virtual public Animal{\npublic:\n    Lion(){\n        cout << \"Lion constructor...\" ;\n    }\n};\nclass Liger : public Tiger, public Lion{\npublic:\n    Liger(){\n        cout << \"Liger constructor...\" ;\n    }\n};\nint main()\n{\n    Liger anil;\n    anil.walk();\n    return 0;\n}",
+    "options": {
+      "A": "Animal constructor...Tiger constructor...Lion constructor...Liger constructor...Animal walks...",
+      "B": "Animal constructor...Tiger constructor...Animal constructor...",
+      "C": "Animal constructor...Lion constructor...Liger constructor...Animal walks...",
+      "D": "Tiger constructor...Animal constructor...Lion constructor...Liger constructor..."
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH4-Q019",
+    "chapter": 4,
+    "questionNumber": 19,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass Person {\npublic:\n    Person(int x)  {\n        cout << \"Person::Person(int)...\" ;\n    }\n};\nclass Faculty : public Person {\npublic:\n    Faculty(int x) :Person(x)   {\n        cout << \"Faculty::Faculty(int)...\" ;\n    }\n};\nclass Student : public Person {\npublic:\n    Student(int x) :Person(x) {\n        cout << \"Student::Student(int)...\" ;\n    }\n};\nclass TA : public Faculty, public Student  {\npublic:\n    TA(int x) :Student(x), Faculty(x)   {\n        cout << \"TA::TA(int)...\" ;\n    }\n};\nint main()  {\n    TA t(30);\n}",
+    "options": {
+      "A": "Person::Person(int)...Faculty::Faculty(int)...Person::Person(int)...Student::Student(int)...TA::TA(int )...",
+      "B": "Faculty::Faculty(int)...Person::Person(int)...Student::Student(int)...TA::TA(int )...",
+      "C": "Person::Person(int)...Faculty::Faculty(int)...Student::Student(int)...TA::TA(int )...",
+      "D": "Person::Person(int)...Faculty::Faculty(int)...Person::Person(int)...Student::Student(int)..."
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH4-Q020",
+    "chapter": 4,
+    "questionNumber": 20,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass Person {\npublic:\n   Person(int x)  {\n      cout << \"Person::Person(int)...\" ;\n   }\n};\nclass Faculty : virtual public Person {\npublic:\n   Faculty(int x) :Person(x)   {\n      cout << \"Faculty::Faculty(int)...\" ;\n   }\n};\nclass Student : virtual public Person {\npublic:\n   Student(int x) :Person(x) {\n      cout << \"Student::Student(int)...\" ;\n   }\n};\nclass TA : public Faculty, public Student  {\npublic:\n   TA(int x) : Person(x),Student(x), Faculty(x)   {\n      cout << \"TA::TA(int)...\" ;\n   }\n};\nint main()  {\n   TA t(30);\n}",
+    "options": {
+      "A": "Person::Person(int)...Faculty::Faculty(int)...Student::Student(int)...TA::TA(int )...",
+      "B": "Person::Person(int)...Faculty::Faculty(int)...Person::Person(int)...Student::Student(int)...TA::TA(int )...",
+      "C": "Person::Person(int)...Faculty::Faculty(int)...Student::Student(int)...",
+      "D": "Person::Person(int)...Faculty::Faculty(int)...Person::Person(int)...Student::Student(int)..."
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH4-Q021",
+    "chapter": 4,
+    "questionNumber": 21,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass Base\n{\npublic:\n   Base()\n   {\n      cout << \"Constructing base...\";\n   }\n   ~Base()\n   {\n      cout << \"Destructing base...\";\n   }\n};\nclass Derived : public Base\n{\npublic:\n   Derived()\n   {\n      cout << \"Constructing derived...\";\n   }\n   ~Derived()\n   {\n      cout << \"Destructing derived...\";\n   }\n};\nvoid main()\n{\n   Derived ob;\n}",
+    "options": {
+      "A": "Constructing base...Constructing derived...Destructing derived...Destructing base...\"",
+      "B": "Constructing base...Constructing derived...",
+      "C": "Destructing derived...Destructing base...",
+      "D": "Constructing derived...Destructing derived"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH4-Q022",
+    "chapter": 4,
+    "questionNumber": 22,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì? \nclass A {\npublic:\n   A() {\n      cout << \"Constructing A...\";\n   }\n   ~A() {\n      cout << \"Destructing A...\";\n   }\n};\nclass B : public A {\npublic:\n   B() {\n      cout << \"Constructing B...\";\n   }\n   ~B() {\n      cout << \"Destructing B...\";\n   }\n};\nclass C : public B {\npublic:\n   C(){\n      cout << \"Constructing C...\";\n   }\n   ~C(){\n      cout << \"Destructing C...\";\n   }\n};\nvoid main(){\n   C ob;\n}",
+    "options": {
+      "A": "Constructing A...Constructing B...Constructing C.Destructing C...Destructing B...Destructing A...",
+      "B": "Constructing A...Constructing B...Constructing C...",
+      "C": "Constructing C...Destructing C...",
+      "D": "Constructing A...Destructing A..."
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH4-Q023",
+    "chapter": 4,
+    "questionNumber": 23,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass Shape\n{\nprotected:\n   double volume;\npublic:\n   virtual void find_vol() = 0;\n};\nclass Cube : public Shape\n{\nprotected:\n   double side;\npublic:\n   Cube();\n   void find_vol();\n};\nclass Sphere : public Shape\n{\nprotected:\n   double radius;\npublic:\n   Sphere();\n   void find_vol();\n};\nCube::Cube()\n{   \n   side=3;\n}\nSphere::Sphere()\n{\n   radius=4;\n}\nvoid Cube::find_vol()\n{\n   volume = side*side*side;\n   cout << \"Cube is : \" << volume << \"...\";\n}\nvoid Sphere::find_vol()\n{\n   volume = radius*radius*radius;\n   cout << \"Sphere is : \"<< volume;\n}\nvoid main()\n{\n   Shape *ptr;\n   Cube cube;\n   Sphere sphere;\n   ptr = &cube;\n   ptr->find_vol();\n   ptr = &sphere;\n   ptr->find_vol();\n}",
+    "options": {
+      "A": "Cube is : 27",
+      "B": "Cube is : 27...Sphere is : 64",
+      "C": "Cube is : 3...Sphere is : 4",
+      "D": "Sphere is : 4"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH4-Q024",
+    "chapter": 4,
+    "questionNumber": 24,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì? \nclass Person {\npublic:\n    Person(const string& name) : name(name) {}\n    void introduce() {\n        cout << \"Name:\" << name;\n    }\nprotected:\n    string name;\n};\nclass Student : virtual public Person {\npublic:\n    Student(const string& name, int studentID) : Person(name), studentID(studentID) {}\n    void study() {\n        cout << \", Studying...\" ;\n    }\nprivate:\n    int studentID;\n};\nclass Worker : virtual public Person {\npublic:\n    Worker(const string& name, const string& job) : Person(name), job(job) {}\n    void work() {\n        cout << \" Working...\" ;\n    }\nprivate:\n    string job;\n};\nclass WorkingStudent : public Student, public Worker {\npublic:\n    WorkingStudent(const string& name, int studentID, const string& job)\n        : Person(name), Student(name, studentID), Worker(name, job) {}\n};\nint main() {\n    WorkingStudent ws(\"John\", 123, \"Engineer\");\n    ws.introduce(); \n    ws.study();\n    ws.work();\n    return 0;\n}",
+    "options": {
+      "A": "Name:John, Engineer... 123...",
+      "B": "Name:John, 123... Engineer...",
+      "C": "Name:John",
+      "D": "Name:John, Studying... Working..."
+    },
+    "correctAnswer": "D",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH4-Q025",
+    "chapter": 4,
+    "questionNumber": 25,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì? \nclass Shape {\npublic:\n    Shape(const string& name) : name(name) {}\n    virtual float area() = 0;  \n    void printName() {\n        cout << name ;\n    }\nprivate:\n    string name;\n};\nclass Rectangle : public Shape {\npublic:\n    Rectangle(float width, float height) : Shape(\"Rectangle\"), width(width), height(height) {}\n    float area() override {\n        return width * height;\n    }\nprivate:\n    float width, height;\n};\nclass Triangle : public Shape {\npublic:\n    Triangle(float base, float height) : Shape(\"Triangle\"), base(base), height(height) {}\n    float area() override {\n        return 0.5 * base * height;\n    }\nprivate:\n    float base, height;\n};\nint main() {\n    Rectangle rectangle(5, 3);\n    Triangle triangle(4, 6);\n    Shape* shapes[] = { &rectangle, &triangle };\n    for (int i = 0; i < 2; ++i) {\n        shapes[i]->printName();\n        cout << \" Area: \" << shapes[i]->area()<< \"\\t\";\n    }\n    return 0;\n}",
+    "options": {
+      "A": "Rectangle Area: 15",
+      "B": "Triangle Area: 12",
+      "C": "Rectangle Area: 15   Triangle Area: 12",
+      "D": "Triangle Area: 12    Rectangle Area: 15"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH4-Q026",
+    "chapter": 4,
+    "questionNumber": 26,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì? \nclass Vehicle {\npublic:\n    Vehicle(const string& name) : name(name) {}\n    virtual void start() = 0;  \n    virtual void stop() = 0;   \n    void displayInfo() {\n        cout << name;\n    }\nprivate:\n    string name;\n};\nclass Car : public Vehicle {\npublic:\n    Car() : Vehicle(\"Car\") {}\n    void start() override {\n        cout << \" Starting.\" ;\n    }\n    void stop() override {\n        cout << \" Stopping.\" ;\n    }\n};\nclass Motorcycle : public Vehicle {\npublic:\n    Motorcycle() : Vehicle(\"Motorcycle\") {}\n    void start() override {\n        cout << \" Starting.\";\n    }\n    void stop() override {\n        cout << \" Stopping.\" ;\n    }\n};\nint main() {\n    Car car;\n    Motorcycle motorcycle;\n    Vehicle* vehicles[] = { &car, &motorcycle };\n    for (int i = 0; i < 2; ++i) {\n        vehicles[i]->displayInfo();     \n        vehicles[i]->start();\n        cout << \"\\t\";\n    }\n    return 0;\n}",
+    "options": {
+      "A": "Car Starting.",
+      "B": "Motorcycle Starting.",
+      "C": "Car Starting.\tMotorcycle Starting.",
+      "D": "Motorcycle\tCar"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH4-Q027",
+    "chapter": 4,
+    "questionNumber": 27,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì? \nclass Shape {\npublic:\n    virtual void draw() = 0; \n    virtual ~Shape() {} \n};\nclass Circle : public Shape {\npublic:\n    void draw() override {\n        cout << \"Circle\" ;\n    }\n};\nclass Square : public Shape {\npublic:\n    void draw() override {\n        cout << \"Square\" ;\n    }\n};\nint main() {\n    Circle circle;\n    Square square;\n    Shape* shapes[] = { &circle, &square };\n    for (int i = 0; i < 2; ++i) {\n        shapes[i]->draw();\n        cout << \"\\t\";\n    }\n    return 0;\n}",
+    "options": {
+      "A": "Circle",
+      "B": "Square",
+      "C": "Square\tCircle",
+      "D": "Circle  \tSquare"
+    },
+    "correctAnswer": "D",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH4-Q028",
+    "chapter": 4,
+    "questionNumber": 28,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì? \n#include <cmath>\nclass Shape {\npublic:\n    virtual float area() = 0;  \n    virtual void printInfo() {\n        cout << \"Shape\" << endl;\n    }\n};\nclass Circle : public Shape {\npublic:\n    Circle(float radius) : radius(radius) {}\n    float area() override {\n        return 3.14159 * radius * radius;\n    }\n    void printInfo() override {\n        cout << \"Circle Radius \" << radius ;\n    }\nprivate:\n    float radius;\n};\nclass Square : public Shape {\npublic:\n    Square(float side) : side(side) {}\n    float area() override {\n        return side * side;\n    }\n    void printInfo() override {\n        cout << \"Square Side \" << side ;\n    }\nprivate:\n    float side;\n};\nint main() {\n    Circle circle(5);\n    Square square(4);\n    Shape* shapes[] = { &circle, &square };\n    for (int i = 0; i < 2; ++i) {\n        shapes[i]->printInfo();\n        cout << \", Area: \" << shapes[i]->area() << \"\\t\";\n    }\n    return 0;\n}",
+    "options": {
+      "A": "Circle Radius 5, Area: 78.5397  Square Side 4, Area: 16",
+      "B": "Square Side 4, Area: 16",
+      "C": "Circle Radius 5, Area: 78.5397",
+      "D": "Circle Radius 5"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH4-Q029",
+    "chapter": 4,
+    "questionNumber": 29,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì? \nclass Animal {\npublic:\n    string name;\n    string species;\n    Animal(const string& name, const string& species)\n        : name(name), species(species) {}\n    virtual string makeSound() const = 0;\n};\nclass Dog : public Animal {\npublic:\n    Dog(const string& name)\n        : Animal(name, \"Dog\") {}\n    string makeSound() const override {\n        return \"Woof!\";\n    }\n};\nclass Cat : public Animal {\npublic:\n    Cat(const string& name)\n        : Animal(name, \"Cat\") {}\n    string makeSound() const override {\n        return \"Meow!\";\n    }\n};\nint main() {\n    Dog dogInstance(\"Buddy\");\n    Cat catInstance(\"Whiskers\");\n    cout << dogInstance.name << \" says \" << dogInstance.makeSound()<<\"\\t\";\n    cout << catInstance.name << \" says \" << catInstance.makeSound();\n    return 0;\n}",
+    "options": {
+      "A": "Buddy says Woof!\tWhiskers says Meow!",
+      "B": "Whiskers says Meow!\tBuddy says Woof!",
+      "C": "Whiskers says Meow!",
+      "D": "Buddy says Woof!"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH4-Q030",
+    "chapter": 4,
+    "questionNumber": 30,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì? \nclass Animal {\npublic:\n    Animal(const string& name, const string& species) : name(name), species(species) {}\n    virtual void makeSound() const = 0;\n    void getInfo() const {\n        cout << name << \" is a \" << species << endl;\n    }\nprotected:\n    string name;\n    string species;\n};\nclass Dog : public Animal {\npublic:\n    Dog(const string& name) : Animal(name, \"Dog\") {}\n    void makeSound() const override {\n        cout << \"Woof!\" << \"\\t\";\n    }\n};\nclass Cat : public Animal {\npublic:\n    Cat(const string& name) : Animal(name, \"Cat\") {}\n    void makeSound() const override {\n        cout << \"Meow!\";\n    }\n};\nint main() {\n    Dog dog(\"Buddy\");\n    Cat cat(\"Whiskers\");\n    dog.makeSound();\n    cat.makeSound();\n    return 0;\n}",
+    "options": {
+      "A": "Woof!",
+      "B": "Meow!",
+      "C": "Woof!   Meow!",
+      "D": "Buddy   Whiskers"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  }
+]

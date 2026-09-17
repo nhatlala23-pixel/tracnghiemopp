@@ -1,0 +1,162 @@
+[
+  {
+    "id": "CH1-Q001",
+    "chapter": 1,
+    "questionNumber": 1,
+    "question": "OOP là từ viết tắt của thuật ngữ tiếng Anh gì?",
+    "options": {
+      "A": "Object-oriented programming",
+      "B": "Object-oriented design",
+      "C": "Object-oriented analysis",
+      "D": "Cả 3 câu trên"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH1-Q002",
+    "chapter": 1,
+    "questionNumber": 2,
+    "question": "Những phát biểu nào sau đây, thể hiện các đặc điểm cơ bản của lập trình hướng đối tượng?",
+    "options": {
+      "A": "Tính đóng gói, tính kế thừa, tính đa hình, tính đặc biệt hóa.",
+      "B": "Tính đóng gói, tính trừu tượng.",
+      "C": "Tính chia nhỏ, tính kế thừa.",
+      "D": "Tính đóng gói, tính kế thừa, tính đa hình, tính trừu tượng"
+    },
+    "correctAnswer": "D",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH1-Q003",
+    "chapter": 1,
+    "questionNumber": 3,
+    "question": "Hãy chọn câu trả lời đúng:",
+    "options": {
+      "A": "Ngôn ngữ lập trình C, C++, C# là ngôn ngữ lập trình cấu trúc.",
+      "B": "Ngôn ngữ lập trình C#, C++ là ngôn ngữ lập trình hướng đối tượng.",
+      "C": "Ngôn ngữ lập trình Pascal, C là ngôn ngữ lập trình cấu trúc.",
+      "D": "Ngôn ngữ lập trình C++, Java là ngôn ngữ lập trình cấu trúc."
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH1-Q004",
+    "chapter": 1,
+    "questionNumber": 4,
+    "question": "Trong lập trình hướng đối tượng, sự đóng gói có thuật ngữ tiếng Anh là gì?",
+    "options": {
+      "A": "Polymorphism.",
+      "B": "Abstraction.",
+      "C": "Encapsulation.",
+      "D": "Inheritance."
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH1-Q005",
+    "chapter": 1,
+    "questionNumber": 5,
+    "question": "Trong lập trình hướng đối tượng, sự trừu tượng có thuật ngữ tiếng Anh là gì?",
+    "options": {
+      "A": "Encapsulation.",
+      "B": "Polymorphism.",
+      "C": "Inheritance.",
+      "D": "Abstraction."
+    },
+    "correctAnswer": "D",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH1-Q006",
+    "chapter": 1,
+    "questionNumber": 6,
+    "question": "Trong lập trình hướng đối tượng, sự kế thừa có thuật ngữ tiếng Anh là gì?",
+    "options": {
+      "A": "Abstraction.",
+      "B": "Encapsulation.",
+      "C": "Polymorphism.",
+      "D": "Inheritance."
+    },
+    "correctAnswer": "D",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH1-Q007",
+    "chapter": 1,
+    "questionNumber": 7,
+    "question": "Trong lập trình hướng đối tượng, lớp kế thừa có thuật ngữ tiếng Anh là gì?",
+    "options": {
+      "A": "Inheritance Class.",
+      "B": "Object Class.",
+      "C": "Derived Class.",
+      "D": "Base Class."
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH1-Q008",
+    "chapter": 1,
+    "questionNumber": 8,
+    "question": "Trong lập trình hướng đối tượng, trong kế thừa. Lớp cơ sở (hay còn gọi là lớp cha) có thuật ngữ tiếng Anh là gì?",
+    "options": {
+      "A": "Base Class.",
+      "B": "Derived Class.",
+      "C": "Object Class.",
+      "D": "Inheritance Class."
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH1-Q009",
+    "chapter": 1,
+    "questionNumber": 9,
+    "question": "Hãy chọn câu phát biểu sai:",
+    "options": {
+      "A": "C++ là ngôn ngữ lập trình cấu trúc.",
+      "B": "Ngôn ngữ C++, Java là ngôn ngữ lập trình hướng đối tượng.",
+      "C": "Ngôn ngữ Pascal là ngôn ngữ lập trình hướng đối tượng.",
+      "D": "C và Pascal là ngôn ngữ chỉ lập trình cấu trúc."
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH1-Q010",
+    "chapter": 1,
+    "questionNumber": 10,
+    "question": "Trong lập trình hướng đối tượng, Sự đa hình có thuật ngữ tiếng Anh là gì?",
+    "options": {
+      "A": "Abstraction.",
+      "B": "Encapsulation.",
+      "C": "Polymorphism.",
+      "D": "Inheritance."
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  }
+]

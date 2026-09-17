@@ -1,0 +1,1282 @@
+[
+  {
+    "id": "CH6-Q001",
+    "chapter": 6,
+    "questionNumber": 1,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One {\n    int i = 1;\n    public int getInt() {\n        return i;\n    }\n}\nclass Two extends One {\n    int i = 2;\n    public int getInt() {\n        return i;\n    }\n}\npublic class Test {\n    public static void main(String[] args) {\n        One one = new One();\n        Two two = (Two) one;\n        System.out.println(two.getInt());\n    }\n}",
+    "options": {
+      "A": "1",
+      "B": "2",
+      "C": "Lỗi biên dịch",
+      "D": "Lỗi thực thi (vì ép kiểu (Two)one)"
+    },
+    "correctAnswer": "D",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q002",
+    "chapter": 6,
+    "questionNumber": 2,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One {\n    public static void print() {\n        System.out.println(\"1\");\n    }\n}\nclass Two extends One {\n    public static void print() {\n        System.out.println(\"2\");\n    }\n}\npublic class Test {\n    public static void main(String args[]) {\n        One one = new Two();\n        one.print();\n    }\n}",
+    "options": {
+      "A": "1",
+      "B": "2",
+      "C": "Lỗi biên dịch",
+      "D": "Lỗi thực thi"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q003",
+    "chapter": 6,
+    "questionNumber": 3,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One {\n    public static void print(int i) {\n        System.out.println(\"Parent\");\n    }\n}\nclass Two extends One {\n    public static void print(byte b) {\n        System.out.println(\"Child\");\n    }\n}\npublic class Test {\n    public static void main(String args[]) {\n        One one = new Two();\n        one.print(10);\n    }\n}",
+    "options": {
+      "A": "Parent",
+      "B": "Child",
+      "C": "Lỗi biên dịch",
+      "D": "Lỗi thực thi"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q004",
+    "chapter": 6,
+    "questionNumber": 4,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One {\n    public static void tool(int i) {\n        System.out.println(\"No\");\n    }\n}\nclass Two extends One {\n    public static void tool(byte b) {\n        System.out.println(\"Ok\");\n    }\n}\npublic class Test {\n    public static void main(String args[]) {\n        One one = new Two();\n        one.tool(5);\n    }\n}",
+    "options": {
+      "A": "Ok",
+      "B": "No",
+      "C": "Lỗi biên dịch",
+      "D": "Lỗi thực thi"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q005",
+    "chapter": 6,
+    "questionNumber": 5,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, Lựa chọn nào được viết ở dòng // your code here, khi biên dịch sẽ không có lỗi?\ninterface Inter {\n}\n\nclass One {\n}\n\nclass Two extends One {\n}\n\nclass Three extends One {\n}\n\nclass Four extends Two implements Inter {\n}\n\nclass Five extends Four {\n}\n\nclass Six extends Three {\n}\n\npublic class Test {\n    public static void main(String[] args) {\n        // your code here\n    }\n}",
+    "options": {
+      "A": "Inter inter = new Four();",
+      "B": "Inter inter = new Inter ();",
+      "C": "Six six = new Three ();",
+      "D": "Three three = new One();"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q006",
+    "chapter": 6,
+    "questionNumber": 6,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One {\n}\n\nclass Two extends One {\n    public void print() {\n        System.out.println(\"Two\");\n    }\n}\n\npublic class Test {\n    public static void main(String[] args) {\n        One one = new Two();\n        one.print();\n    }\n}",
+    "options": {
+      "A": "Two",
+      "B": "Lỗi biên dịch",
+      "C": "Lỗi thực thi",
+      "D": "Cả 3 đáp án đều sai"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q007",
+    "chapter": 6,
+    "questionNumber": 7,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One {\n    int x = 0;\n    public One(int x) {\n        this.x = x++;\n    }\n}\n\npublic class Test {\n    public static void main(String[] args) {\n        One one = new One(5);\n        System.out.println(one.x);\n    }\n}",
+    "options": {
+      "A": "1",
+      "B": "0",
+      "C": "6",
+      "D": "5"
+    },
+    "correctAnswer": "D",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q008",
+    "chapter": 6,
+    "questionNumber": 8,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One {\n    public One(int x) {\n        System.out.print(\"int constructor\");\n    }\n\n    public One(long l) {\n        System.out.print(\"long constructor\");\n    }\n}\n\npublic class Test {\n    public static void main(String[] args) {\n        long l = 20l;\n        One one = new One(l);\n    }\n}",
+    "options": {
+      "A": "int constructor",
+      "B": "long constructor int constructor",
+      "C": "long constructor long constructor",
+      "D": "long constructor"
+    },
+    "correctAnswer": "D",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q009",
+    "chapter": 6,
+    "questionNumber": 9,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One {\n    public One(int x) {\n        System.out.print(\"int constructor\");\n    }\n\n    public One(char c) {\n        System.out.print(\"char constructor\");\n    }\n\n    void One(String str) {\n        System.out.print(\"String constructor\");\n    }\n}\npublic class Test {\n    public static void main(String[] args) {\n        String ch = \"c\";\n        One one = new One(1);\n    }\n}",
+    "options": {
+      "A": "char constructor",
+      "B": "int constructor",
+      "C": "Lỗi biên dịch",
+      "D": "Cả 3 đáp án đều sai"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q010",
+    "chapter": 6,
+    "questionNumber": 10,
+    "question": "Khi bạn biên dịch và chạy chương trình viết bằng ngôn ngữ Java bằng lệnh đã cho ở bên dưới sau kết quả sẽ là:\ninterface ITestInterface {\n    int status = 0;\n}\npublic class Test implements ITestInterface {\n    public static void main(String[] args) {\n        Test t = new Test();\n        t.status = 69;\n        System.out.print(t.status);\n    }\n}",
+    "options": {
+      "A": "1",
+      "B": "0",
+      "C": "2",
+      "D": "Lỗi biên dịch"
+    },
+    "correctAnswer": "D",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q011",
+    "chapter": 6,
+    "questionNumber": 11,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\ninterface ITestInterface {\n    int i = 0;\n    public ITestInterface(){\n        System.out.print(\"I Constructor \");\n    }\n}\npublic class Test implements ITestInterface {\n    public Test() {\n        System.out.print(\"Test Constructor \");\n    }\n    public static void main(String[] args) {\n        Test t = new Test();\n    }\n}",
+    "options": {
+      "A": "Test Constructor",
+      "B": "I Constructor Test Constructor",
+      "C": "T Constructor I Constructor",
+      "D": "Lỗi biên dịch"
+    },
+    "correctAnswer": "D",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q012",
+    "chapter": 6,
+    "questionNumber": 12,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One {\n    public void greetings() {\n        System.out.println(\"Hello\");\n    }\n}\nclass Two extends One {\n    public void greetings() {\n        System.out.println(\"Hi\");\n    }\n}\npublic class Test {\n    public static void main(String[] args) {\n        One one = new Two();\n        one.greetings();\n    }\n}",
+    "options": {
+      "A": "Hello",
+      "B": "Hi",
+      "C": "Lỗi biên dịch",
+      "D": "Lỗi thực thi"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q013",
+    "chapter": 6,
+    "questionNumber": 13,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One {\n    public One() {\n        System.out.println(\"Hello Object\");\n    }\n    public One(int x) {\n        this();\n        System.out.println(\"Hello Object with int\");\n    }\n}\npublic class Test {\n    public static void main(String[] args) {\n        One one = new One();\n    }\n}",
+    "options": {
+      "A": "Hello Object with int",
+      "B": "Hello Object",
+      "C": "Hello Object with int Hello Object",
+      "D": "Hello Object Hello Object with int"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q014",
+    "chapter": 6,
+    "questionNumber": 14,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One {\n    public One(int i) {\n        System.out.println(\"int\");\n    }\n    public void One(short s) {\n        System.out.println(\"short\");\n    }\n}\npublic class Test {\n    public static void main(String[] args) {\n        short s = 10;\n        One one = new One(s);\n    }\n}",
+    "options": {
+      "A": "int short",
+      "B": "short",
+      "C": "int",
+      "D": "short int"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q015",
+    "chapter": 6,
+    "questionNumber": 15,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One {\n    public void className() {\n        System.out.println(\"Parent\");\n    }\n}\nclass Two extends One {\n    public void className() {\n        System.out.println(\"Child\");\n    }\n}\npublic class Test {\n    public static void main(String[] args) {\n        One one = new Two();\n        one.className();\n    }\n}",
+    "options": {
+      "A": "Parent",
+      "B": "Child Parent",
+      "C": "Parent Child",
+      "D": "Child"
+    },
+    "correctAnswer": "D",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q016",
+    "chapter": 6,
+    "questionNumber": 16,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One {\n    public void greetings() {\n        System.out.println(\"Hello\");\n    }\n}\nclass Two extends One {\n    public void greetings() {\n        System.out.println(\"Hi\");\n    }\n}\npublic class Test {\n    public static void main(String[] args) {\n        One one = new Two();\n        one.greetings();\n    }\n}",
+    "options": {
+      "A": "Hello",
+      "B": "Hello Hi",
+      "C": "Hi Hello",
+      "D": "Hi"
+    },
+    "correctAnswer": "D",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q017",
+    "chapter": 6,
+    "questionNumber": 17,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One {\n    public static void greetings() {\n        System.out.println(\"Hello\");\n    }\n}\nclass Two extends One {\n    public static void greetings() {\n        System.out.println(\"Hi\");\n    }\n}\npublic class Test {\n    public static void main(String[] args) {\n        One one = new Two();\n        one.greetings();\n    }\n}",
+    "options": {
+      "A": "Hello",
+      "B": "Hi",
+      "C": "Lỗi biên dịch",
+      "D": "Lỗi thực thi"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q018",
+    "chapter": 6,
+    "questionNumber": 18,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One {\n    private void className() {\n        System.out.println(\"Parent\");\n    }\n}\nclass Two extends One {\n    public void className() {\n        System.out.println(\"Child\");\n    }\n}\npublic class Test {\n    public static void main(String[] args) {\n        One one = new Two();\n        one.className();\n    }\n}",
+    "options": {
+      "A": "Parent",
+      "B": "Child",
+      "C": "Lỗi biên dịch",
+      "D": "Lỗi thực thi"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q019",
+    "chapter": 6,
+    "questionNumber": 19,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One {\n    private void callMe() {\n        System.out.println(\"Parent\");\n    }\n    public void caller() {\n        callMe();\n    }\n}\nclass Two extends One {\n    public void callMe() {\n        System.out.println(\"Child\");\n    }\n}\npublic class Test {\n    public static void main(String[] args) {\n        Two two = new Two();\n        two.caller();\n    }\n}",
+    "options": {
+      "A": "Parent",
+      "B": "Child",
+      "C": "Parent Child",
+      "D": "Lỗi biên dịch"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q020",
+    "chapter": 6,
+    "questionNumber": 20,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One {\n    public void callMe() {\n        System.out.println(\"Parent\");\n    }\n    public void caller() {\n        callMe();\n    }\n}\nclass Two extends One {\n    public void callMe() {\n        System.out.println(\"Child\");\n    }\n}\npublic class Test {\n    public static void main(String[] args) {\n        Two two = new Two();\n        two.caller();\n    }\n}",
+    "options": {
+      "A": "Parent",
+      "B": "Child",
+      "C": "Lỗi thực thi",
+      "D": "Lỗi biên dịch"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q021",
+    "chapter": 6,
+    "questionNumber": 21,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One {\n    public int method() {\n        System.out.println(\"int\");\n        return 0;\n    }\n}\nclass Two extends One {\n    public int method() {\n        System.out.println(\"short\");\n        return 1;\n    }\n}\npublic class Test {\n    public static void main(String[] args) {\n        One one = new Two();\n        one.method();\n    }\n}",
+    "options": {
+      "A": "int",
+      "B": "short",
+      "C": "Lỗi biên dịch",
+      "D": "Lỗi thực thi"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q022",
+    "chapter": 6,
+    "questionNumber": 22,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One {\n    public void someMethod() throws Exception {\n        System.out.println(\"Exception\");\n    }\n}\nclass Two extends One {\n    public void someMethod() {\n        System.out.println(\"Not Exception\");\n    }\n    public static void main(String[] args) {\n        One one = new Two();\n        one.someMethod();\n    }\n}",
+    "options": {
+      "A": "Exception",
+      "B": "Not Exception",
+      "C": "Lỗi biên dịch",
+      "D": "Lỗi thực thi"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q023",
+    "chapter": 6,
+    "questionNumber": 23,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One {\n    public One() {\n        System.out.print(\"One,\");\n    }\n}\nclass Two extends One {\n    void Two() {\n        System.out.print(\"Two,\");\n    }\n}\nclass Three extends Two {\n    public Three() {\n        System.out.print(\"Three,\");\n    }\n}\npublic class Test {\n    public static void main(String[] args) {\n        Three three = new Three();\n    }\n}",
+    "options": {
+      "A": "One,Two,Three,",
+      "B": "Three,Two,One,",
+      "C": "One,Three,",
+      "D": "One,"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q024",
+    "chapter": 6,
+    "questionNumber": 24,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, Lựa chọn nào nếu được viết ở dòng //method declaration here, sẽ được gọi là nạp chồng (override) phương thức someMethod được định nghĩa trong lớp One\nclass One {\n    public void someMethod(int i) {\n    }\n}\nclass Two extends One {\n    public void someMethod(double anotherint) {\n    }\n    // method declaration here\n}\npublic class Test {\n    public static void main(String[] args) {\n        Two two = new Two();\n    }\n}",
+    "options": {
+      "A": "void public someMethod(int i)",
+      "B": "public void someMethod(int anotherint)",
+      "C": "public void someMethod(String str)",
+      "D": "public void someMethod(double anotherint)"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q025",
+    "chapter": 6,
+    "questionNumber": 25,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One {\n    void One() {\n        System.out.print(\"One,\");\n    }\n}\nclass Two extends One {\n    void Two() {\n        System.out.print(\"Two,\");\n    }\n}\nclass Three extends Two {\n    void Three() {\n        System.out.print(\"Three,\");\n    }\n}\npublic class Test {\n    public static void main(String[] args) {\n        Three three = new Three();\n    }\n}",
+    "options": {
+      "A": "One,Two,Three,",
+      "B": "Three,Two,One,",
+      "C": "Three,",
+      "D": "Cả 3 đáp án đều sai"
+    },
+    "correctAnswer": "D",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q026",
+    "chapter": 6,
+    "questionNumber": 26,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\npublic class Test {\n    int i = 68;\n    public static void main(String[] args) {\n        System.out.println(i++);\n    }\n}",
+    "options": {
+      "A": "69",
+      "B": "68",
+      "C": "Lỗi biên dịch",
+      "D": "Cả 3 đáp án đều sai"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q027",
+    "chapter": 6,
+    "questionNumber": 27,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nabstract class Tesst {\n    public void something() {\n        System.out.println(\"Something\");\n    }\n    abstract public void nothing();\n}\nclass TestChild extends Tesst {\n    @Override\n    public void nothing() {\n        System.out.println(\"Nothing\");\n    }\n}\npublic class Test {\n    public static void main(String[] args) {\n        TestChild testChild = new TestChild();\n        testChild.something();\n    }\n}",
+    "options": {
+      "A": "Nothing",
+      "B": "Something",
+      "C": "Lỗi biên dịch",
+      "D": "Lỗi thực thi"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q028",
+    "chapter": 6,
+    "questionNumber": 28,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\npublic class Test {\n    String name = \"Test\";\n    public Test() {\n        name = \"TestObject\";\n    }\n    public static void main(String[] args) {\n        System.out.println(\"Name is \" + name);\n    }\n}",
+    "options": {
+      "A": "Name is Test",
+      "B": "Name is TestObject",
+      "C": "Lỗi biên dịch",
+      "D": "Cả 3 đáp án đều sai"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q029",
+    "chapter": 6,
+    "questionNumber": 29,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\npublic class Test {\n    static String name = \"Test\";\n    public Test() {\n        name = \"TestObject\";\n    }\n    public static void main(String[] args) {\n        System.out.println(\"Name is \" + name);\n    }\n}",
+    "options": {
+      "A": "Name is Test",
+      "B": "Name is TestObject",
+      "C": "Lỗi biên dịch",
+      "D": "Cả 3 đáp án đều sai"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q030",
+    "chapter": 6,
+    "questionNumber": 30,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One {\n    public One() {\n        System.out.println(\"Abstract Class\");\n    }\n    abstract void nothing();\n}\npublic class Test {\n    public static void main(String[] args) {\n        One one = new One();\n    }\n}",
+    "options": {
+      "A": "Abstract Class",
+      "B": "Lỗi biên dịch",
+      "C": "Lỗi thực thi",
+      "D": "Cả 3 đáp án đều sai"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q031",
+    "chapter": 6,
+    "questionNumber": 31,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nabstract class One {\n    public One() {\n        System.out.println(\"One\");\n    }\n    abstract void nothing();\n}\npublic class Test {\n    public static void main(String[] args) {\n        One one = new One();\n    }\n}",
+    "options": {
+      "A": "One",
+      "B": "Lỗi biên dịch",
+      "C": "Lỗi thực thi",
+      "D": "Cả 3 đáp án đều sai"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q032",
+    "chapter": 6,
+    "questionNumber": 32,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One {\n    public One(String name) {\n        System.out.print(\"Hello \" + name + \",\");\n    }\n}\nclass Two extends One {\n    public Two() {\n        super(\"Alice\");\n        System.out.print(\"Hi,\");\n    }\n}\npublic class Test {\n    public static void main(String[] args) {\n        Two two = new Two();\n    }\n}",
+    "options": {
+      "A": "Hi,",
+      "B": "Alice",
+      "C": "Hello Alice,Hi,",
+      "D": "Cả 3 đáp án đều sai"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q033",
+    "chapter": 6,
+    "questionNumber": 33,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One {\n    public One(String name) {\n        System.out.print(\"Hello \" + name + \",\");\n    }\n}\nclass Two extends One {\n    public Two() {\n        System.out.print(\"Hi,\");\n        super(\"Two\");\n    }\n}\npublic class Test {\n    public static void main(String[] args) {\n        Two two = new Two();\n    }\n}",
+    "options": {
+      "A": "Hi,",
+      "B": "Hi,Hello Two,",
+      "C": "Lỗi biên dịch",
+      "D": "Cả 3 đáp án đều sai"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q034",
+    "chapter": 6,
+    "questionNumber": 34,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One {\n    public One(String name) {\n        System.out.print(\"Hello \" + name + \",\");\n    }\n}\nclass Two extends One {\n    public Two() {\n        super(\"Two\");\n        System.out.print(\"Hi,\");\n    }\n}\npublic class Test {\n    public static void main(String[] args) {\n        Two two = new Two();\n    }\n}",
+    "options": {
+      "A": "Hi,",
+      "B": "Hi,Hello Two,",
+      "C": "Hello Two,Hi,",
+      "D": "Cả 3 đáp án đều sai"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q035",
+    "chapter": 6,
+    "questionNumber": 35,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One {\n    public One(String name) {\n        System.out.print(\"Hello \" + name + \",\");\n    }\n}\nclass Two extends One {\n    public Two() {\n        this(\"Two\");\n        System.out.print(\"Hi,\");\n    }\n}\npublic class Test {\n    public static void main(String[] args) {\n        Two two = new Two();\n    }\n}",
+    "options": {
+      "A": "Cả 3 đáp án đều sai",
+      "B": "Hello",
+      "C": "Lỗi biên dịch",
+      "D": "Lỗi thực thi"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q036",
+    "chapter": 6,
+    "questionNumber": 36,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One {\n    public One() {\n        System.out.print(\"Hi One,\");\n    }\n    public One(String name) {\n        System.out.print(\"Hello \" + name + \",\");\n    }\n}\nclass Two extends One {\n    public Two() {\n        this(\"Two\");\n        System.out.print(\"Hi Two,\");\n    }\n    public Two(String name) {\n        System.out.print(\"Hello \" + name + \",\");\n    }\n}\npublic class Test {\n    public static void main(String[] args) {\n        Two two = new Two();\n    }\n}",
+    "options": {
+      "A": "Hi One,",
+      "B": "Hi Two,",
+      "C": "Hi One,Hello Two",
+      "D": "Hi One,Hello Two,Hi Two,"
+    },
+    "correctAnswer": "D",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q037",
+    "chapter": 6,
+    "questionNumber": 37,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One {\n    public One() {\n        System.out.print(\"Parent \");\n    }\n}\nclass Two extends One {\n    public Two() {\n        System.out.print(\"Child \");\n    }\n}\npublic class Test {\n    public static void main(String[] args) {\n        One one = new Two();\n    }\n}",
+    "options": {
+      "A": "Parent Child",
+      "B": "Child Parent",
+      "C": "Child",
+      "D": "Parent"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q038",
+    "chapter": 6,
+    "questionNumber": 38,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass TestChild extends Test {\n    public TestChild() {\n        System.out.println(\"TestChild1 \");\n    }\n}\npublic class Test {\n    void TestChild() {\n        System.out.println(\"TestChild2 \");\n    }\n    public static void main(String[] args) {\n        new Test().TestChild();\n    }\n}",
+    "options": {
+      "A": "TestChild1 TestChild2",
+      "B": "TestChild2 TestChild1",
+      "C": "TestChild2",
+      "D": "Cả 3 đáp án đều sai"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q039",
+    "chapter": 6,
+    "questionNumber": 39,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\npublic class Test {\n    int i = 68;\n    void print() {\n        System.out.println(i);\n    }\n    public static void main(String[] args) {\n        new Test().print();\n    }\n}",
+    "options": {
+      "A": "0",
+      "B": "68",
+      "C": "Lỗi thực thi",
+      "D": "Lỗi biên dịch"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q040",
+    "chapter": 6,
+    "questionNumber": 40,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nfinal class One {\n    public void sayHello() {\n        System.out.println(\"Parent Hello\");\n    }\n}\nclass Two extends One {\n    public void sayHello() {\n        System.out.println(\"Child Hello\");\n    }\n}\npublic class Test {\n    public static void main(String[] args) {\n        One o = new Two();\n        o.sayHello();\n    }\n}",
+    "options": {
+      "A": "Parent Hello",
+      "B": "Child Hello",
+      "C": "Lỗi biên dịch",
+      "D": "Cả 3 đáp án đều sai"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q041",
+    "chapter": 6,
+    "questionNumber": 41,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\npublic class Test {\n    public int count(int i) {\n        return 0;\n    }\n    public long count(long i) {\n        return 0L;\n    }\n    public static void main(String[] args) {\n        Test test = new Test();\n        int resultInt = test.count(5);\n        long resultLong = test.count(6);\n        System.out.print(resultInt);\n        System.out.print(resultLong);\n    }\n}",
+    "options": {
+      "A": "5",
+      "B": "6",
+      "C": "0",
+      "D": "00"
+    },
+    "correctAnswer": "D",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q042",
+    "chapter": 6,
+    "questionNumber": 42,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\npublic class Test {\n    public static void main(String[] args) {\n        One o = new Two();\n        o.sayHello();\n    }\n}\nclass One {\n    public void sayHello() {\n        System.out.println(\"Parent Hello\");\n    }\n}\nclass Two extends One {\n    public void sayHello() {\n        System.out.println(\"Child Hello\");\n    }\n}",
+    "options": {
+      "A": "Parent Hello",
+      "B": "Child Hello",
+      "C": "Lỗi biên dịch",
+      "D": "Lỗi thực thi"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q043",
+    "chapter": 6,
+    "questionNumber": 43,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass TestChild extends Test {\n    public int count(int i) {\n        return 1;\n    }\n}\npublic class Test {\n    public int count(int i) {\n        return 0;\n    }\n    public static void main(String[] args) {\n        Test test = new TestChild();\n        int resultInt = test.count(5);\n        System.out.println(\"Result for int: \" + resultInt);\n    }\n}",
+    "options": {
+      "A": "Lỗi biên dịch",
+      "B": "Lỗi thực thi",
+      "C": "Result for int: 0",
+      "D": "Result for int: 1"
+    },
+    "correctAnswer": "D",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q044",
+    "chapter": 6,
+    "questionNumber": 44,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\npublic class Test {\n    public static void main(String[] args) {\n        One o = new Two();\n        o.sayHello();\n    }\n}\nclass One {\n    public final void sayHello() {\n        System.out.println(\"Parent Hello\");\n    }\n}\nclass Two extends One {\n    public void sayHello() {\n        System.out.println(\"Child Hello\");\n    }\n}",
+    "options": {
+      "A": "Parent Hello",
+      "B": "Child Hello",
+      "C": "Lỗi biên dịch",
+      "D": "Lỗi thực thi"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q045",
+    "chapter": 6,
+    "questionNumber": 45,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\npublic class Test {\n    public int count(int i) {\n        return 0;\n    }\n    public int count(double j) {\n        return 1;\n    }\n    public static void main(String[] args) {\n        Test test = new Test();\n        int i = test.count(5);\n        int d = test.count(5.0);\n        System.out.print(\"int: \" + i);\n        System.out.print(\" double: \" + d);\n    }\n}",
+    "options": {
+      "A": "int: 0",
+      "B": "double: 0",
+      "C": "int: 0 double: 0",
+      "D": "int: 0 double: 1"
+    },
+    "correctAnswer": "D",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q046",
+    "chapter": 6,
+    "questionNumber": 46,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One {\n    private void count(int i) {\n        System.out.println(0);\n    }\n}\npublic class Test extends One {\n    public void count(int j) {\n        System.out.println(1);\n    }\n    public static void main(String[] args) {\n        One one = new Test();\n        one.count(0);\n    }\n}",
+    "options": {
+      "A": "1",
+      "B": "0",
+      "C": "Lỗi biên dịch",
+      "D": "Lỗi thực thi"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q047",
+    "chapter": 6,
+    "questionNumber": 47,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\npublic class Test {\n    class TestInner {\n        void sayHi() {\n            System.out.println(\"Hi\");\n        }\n    }\n    public static void main(String[] args) {\n        TestInner inner = new TestInner();\n        inner.sayHi();\n    }\n}",
+    "options": {
+      "A": "Hi",
+      "B": "Lỗi biên dịch",
+      "C": "Lỗi thực thi",
+      "D": "Cả 3 đáp án đều sai"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q048",
+    "chapter": 6,
+    "questionNumber": 48,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\npublic class Test {\n    class TestInner {\n        void sayHi() {\n            System.out.println(\"Hi\");\n        }\n    }\n    public static void main(String[] args) {\n        Test t = new Test();\n        TestInner inner = t.new TestInner();\n        inner.sayHi();\n    }\n}",
+    "options": {
+      "A": "Hi",
+      "B": "Lỗi biên dịch",
+      "C": "Lỗi thực thi",
+      "D": "Cả 3 đáp án đều sai"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q049",
+    "chapter": 6,
+    "questionNumber": 49,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\npublic class Test {\n    public void compute(int i, int j) {\n        System.out.println(\"int version\");\n    }\n    public void compute(long i, long j) {\n        System.out.println(\"long version\");\n    }\n    public static void main(String args[]) {\n        Test t = new Test();\n        t.compute(10, 5);\n    }\n}",
+    "options": {
+      "A": "int version",
+      "B": "long version",
+      "C": "Lỗi biên dịch",
+      "D": "Lỗi thực thi"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q050",
+    "chapter": 6,
+    "questionNumber": 50,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, Lựa chọn nào được viết ở dòng // access variable here, khi biên dịch sẽ không có lỗi?\npublic class Test {\n    private int i = 0;\n    int j = 1;\n    public int k = 2;\n    class TestInner {\n        private int l = 3;\n        int m = 4;\n        public int n = 5;\n        void sayHi() {\n            // access variable here,\n        }\n    }\n    public static void main(String args[]) {\n    }\n}",
+    "options": {
+      "A": "i = 5;",
+      "B": "j = 5;",
+      "C": "k = 5;",
+      "D": "Cả 3 đáp án đều đúng"
+    },
+    "correctAnswer": "D",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q051",
+    "chapter": 6,
+    "questionNumber": 51,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One {\n    public static void process() {\n        System.out.print(\"Parent \");\n    }\n}\nclass Two extends One {\n    public static void process() {\n        super.process();\n        System.out.print(\"Child\");\n    }\n}\npublic class Test {\n    public static void main(String args[]) {\n        One one = new Two();\n        one.process();\n    }\n}",
+    "options": {
+      "A": "Parent",
+      "B": "Child",
+      "C": "Parent Child",
+      "D": "Lỗi biên dịch"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q052",
+    "chapter": 6,
+    "questionNumber": 52,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One {\n    public void process() {\n        System.out.print(\"Parent \");\n    }\n}\nclass Two extends One {\n    public void process() {\n        super.process();\n        System.out.print(\"Child\");\n    }\n}\npublic class Test {\n    public static void main(String args[]) {\n        One one = new Two();\n        one.process();\n    }\n}",
+    "options": {
+      "A": "Parent",
+      "B": "Child",
+      "C": "Parent Child",
+      "D": "Lỗi biên dịch"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q053",
+    "chapter": 6,
+    "questionNumber": 53,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\npublic class Test {\n    private int i = 0;\n    class TestInner {\n        public int i = 1;\n        void sayHi() {\n            System.out.println(i);\n        }\n    }\n    public static void main(String[] args) {\n        TestInner inner = new Test().new TestInner();\n        inner.sayHi();\n    }\n}",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "Lỗi biên dịch",
+      "D": "Lỗi thực thi"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q054",
+    "chapter": 6,
+    "questionNumber": 54,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One {\n    public One() {\n        System.out.print(\" One \");\n    }\n}\nclass Two extends One {\n    public Two() {\n        System.out.print(\" Two \");\n    }\n}\npublic class Test {\n    public static void main(String[] args) {\n        One one = new One();\n        Two two = new Two();\n    }\n}",
+    "options": {
+      "A": "One",
+      "B": "Two",
+      "C": "One Two",
+      "D": "One One Two"
+    },
+    "correctAnswer": "D",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q055",
+    "chapter": 6,
+    "questionNumber": 55,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\ninterface TestInterface {\n}\nclass TestImplementation implements TestInterface {\n    public TestImplementation() {\n        System.out.println(\"TestImplementation\");\n    }\n}\nclass Test {\n    public static void main(String[] args) {\n        TestImplementation implementation = new TestImplementation();\n    }\n}",
+    "options": {
+      "A": "TestImplementation",
+      "B": "Hello, world!",
+      "C": "Lỗi biên dịch",
+      "D": "Lỗi thực thi"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q056",
+    "chapter": 6,
+    "questionNumber": 56,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\ninterface TestInterface {\n    void someMethod();\n    class Test {\n        void display() {\n            System.out.println(\"Test class.\");\n        }\n    }\n}\npublic class Test {\n    public static void main(String[] args) {\n        TestInterface.Test testObj = new TestInterface.Test();\n        testObj.display();\n    }\n}",
+    "options": {
+      "A": "Test class.",
+      "B": "Hello, world!",
+      "C": "Lỗi biên dịch",
+      "D": "Lỗi thực thi"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q057",
+    "chapter": 6,
+    "questionNumber": 57,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One {\n    public abstract One();\n}\nclass Two extends One {\n    public Two() {\n        System.out.println(\"Two\");\n    }\n}\npublic class Test {\n    public static void main(String[] args) {\n        Two two = new Two();\n    }\n}",
+    "options": {
+      "A": "Two",
+      "B": "One",
+      "C": "Lỗi biên dịch",
+      "D": "Lỗi thực thi"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q058",
+    "chapter": 6,
+    "questionNumber": 58,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\ninterface TestInterface {\n    class Test {\n        void display() {\n            System.out.println(\"Test class.\");\n        }\n    }\n}\npublic class Test {\n    public static void main(String[] args) {\n        TestInterface.Test testObj = new TestInterface.Test();\n        testObj.display();\n    }\n}",
+    "options": {
+      "A": "Test class.",
+      "B": "Lỗi biên dịch",
+      "C": "Lỗi thực thi",
+      "D": "Cả 3 đáp án đều sai"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q059",
+    "chapter": 6,
+    "questionNumber": 59,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One {\n    int i = 1;\n    public One() {\n        System.out.println(i);\n    }\n}\nclass Two extends One {\n    int i = 10;\n    public One(){\n        System.out.println(i);\n    }\n}\npublic class Test {\n    public static void main(String[] args) {\n        One one = new Two();\n    }\n}",
+    "options": {
+      "A": "1",
+      "B": "10",
+      "C": "Lỗi biên dịch",
+      "D": "Lỗi thực thi"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q060",
+    "chapter": 6,
+    "questionNumber": 60,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One {\n}\nclass Two extends One {\n}\npublic class Test extends One {\n    public static void main(String[] args) {\n        One one = new One();\n        Two two = new Two();\n        System.out.println(one instanceof Two);\n    }\n}",
+    "options": {
+      "A": "true",
+      "B": "false",
+      "C": "Cả 3 đáp án đều sai",
+      "D": "Lỗi biên dịch"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q061",
+    "chapter": 6,
+    "questionNumber": 61,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One {\n}\nclass Two extends One {\n}\npublic class Test extends One {\n    public static void main(String[] args) {\n        One one = new One();\n        Two two = new Two();\n        System.out.println(one instanceof One);\n    }\n}",
+    "options": {
+      "A": "true",
+      "B": "false",
+      "C": "Cả 3 đáp án đều sai",
+      "D": "Lỗi biên dịch"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q062",
+    "chapter": 6,
+    "questionNumber": 62,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One {\n    public One() {\n        System.out.print(\"One\");\n    }\n}\nclass Two extends One {\n    public Two() {\n        System.out.print(\"Two\");\n    }\n}\nclass Three {\n    Two two = new Two();\n    public Three() {\n        System.out.print(\"Three\");\n    }\n}\npublic class Test {\n    public static void main(String[] args) {\n        Three three = new Three();\n    }\n}",
+    "options": {
+      "A": "ThreeTwoOne",
+      "B": "ThreeOneTwo",
+      "C": "OneTwoThree",
+      "D": "Cả 3 đáp án đều sai"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q063",
+    "chapter": 6,
+    "questionNumber": 63,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass TestInner {\n    public void print() {\n        System.out.println(\"Hi\");\n    }\n}\npublic class Test {\n    public static void main(String[] args) {\n        TestInner t = new TestInner(); {\n            public void print() {\n                System.out.println(\"Hello\");\n            }\n        };\n        t.print();\n    }\n}",
+    "options": {
+      "A": "Hi",
+      "B": "Hello",
+      "C": "Lỗi biên dịch",
+      "D": "Cả 3 đáp án đều sai"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q064",
+    "chapter": 6,
+    "questionNumber": 64,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One {\n    String className = \"One\";\n}\nclass Two extends One {\n    String className = \"Two\";\n}\npublic class Test {\n    public static void main(String[] args) {\n        One one = new Two();\n        System.out.println(one.className);\n    }\n}",
+    "options": {
+      "A": "One",
+      "B": "Two",
+      "C": "Lỗi biên dịch",
+      "D": "Lỗi thực thi"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q065",
+    "chapter": 6,
+    "questionNumber": 65,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One {\n    public One() {\n        System.out.print(\"One\");\n    }\n    public One(String str) {\n        System.out.print(\"OneStr\");\n    }\n}\nclass Two extends One {\n    public Two(String str) {\n        super();\n        System.out.print(\"TwoStr\");\n    }\n}\npublic class Test {\n    public static void main(String[] args) {\n        Two two = new Two(\"Hello\");\n    }\n}",
+    "options": {
+      "A": "OneTwoStrOneStr",
+      "B": "TwoStrOneStr",
+      "C": "OneTwoStr",
+      "D": "Lỗi biên dịch"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q066",
+    "chapter": 6,
+    "questionNumber": 66,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\npublic class Test {\n    public void doNothing(Object object) {\n        System.out.println(\"Object\");\n    }\n    public void doNothing(String string) {\n        System.out.println(\"String\");\n    }\n    public static void main(String[] args) {\n        Test test = new Test();\n        test.doNothing(args);\n    }\n}",
+    "options": {
+      "A": "String",
+      "B": "Object",
+      "C": "Cả 3 đáp án đều sai",
+      "D": "Lỗi biên dịch"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q067",
+    "chapter": 6,
+    "questionNumber": 67,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\npublic class Test {\n    public void doNothing(Object object) {\n        System.out.println(\"Object\");\n    }\n    public void doNothing(Integer i) {\n        System.out.println(\"Integer\");\n    }\n    public static void main(String[] args) {\n        Test test = new Test();\n        test.doNothing(null);\n    }\n}",
+    "options": {
+      "A": "Integer",
+      "B": "Object",
+      "C": "String",
+      "D": "Cả 3 đáp án đều sai"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q068",
+    "chapter": 6,
+    "questionNumber": 68,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\npublic class Test {\n    public void doNothing(Object object) {\n        System.out.println(\"Object\");\n    }\n    public void doNothing(Integer i) {\n        System.out.println(\"Integer\");\n    }\n    public void doNothing(Double d) {\n        System.out.println(\"Double\");\n    }\n    public static void main(String[] args) {\n        test.doNothing(new Test());\n    }\n}",
+    "options": {
+      "A": "Object",
+      "B": "Integer",
+      "C": "Double",
+      "D": "Lỗi biên dịch"
+    },
+    "correctAnswer": "D",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q069",
+    "chapter": 6,
+    "questionNumber": 69,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\npublic class Test {\n    public void doNothing(Object object) {\n        System.out.println(\"Object\");\n    }\n    public void doNothing(Integer i) {\n        System.out.println(\"Integer\");\n    }\n    public void doNothing(Double i) {\n        System.out.println(\"Integer\");\n    }\n    public static void main(String[] args) {\n        Test test = new Test();\n        test.doNothing(test);\n    }\n}",
+    "options": {
+      "A": "Integer",
+      "B": "Double",
+      "C": "Object",
+      "D": "Cả 3 đáp án đều sai"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q070",
+    "chapter": 6,
+    "questionNumber": 70,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, Lựa chọn nào được viết ở dòng //variable name here, khi biên dịch sẽ không có lỗi?\npublic class Test {\n    private int i = 1;\n    int j = 2;\n    public void TestMethod(){\n        class TestInner{\n            int k = 3;\n            public void InnerMethod(int m){\n                System.out.println(//variable name here);\n            }\n        }\n    }\n}",
+    "options": {
+      "A": "i",
+      "B": "j",
+      "C": "k",
+      "D": "Cả 3 đáp án đều đúng"
+    },
+    "correctAnswer": "D",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q071",
+    "chapter": 6,
+    "questionNumber": 71,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, Lựa chọn nào được viết ở dòng //access variable here, khi biên dịch sẽ không có lỗi?\npublic class Test {\n    int x = 0;\n    static int y = 1;\n    static class InnerClass {\n        int z = 2;\n        public void getValue() {\n            // access variable here\n        }\n    }\n}",
+    "options": {
+      "A": "y = z = 6;",
+      "B": "y = 8;",
+      "C": "z = 9;",
+      "D": "Cả 3 đáp án đều đúng"
+    },
+    "correctAnswer": "D",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q072",
+    "chapter": 6,
+    "questionNumber": 72,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\npublic class Test {\n    public void TestMethod() {\n        final int a = 0;\n        class TestInner {\n            public void InnerMethod(final int x, int y) {\n                System.out.println(y);\n            }\n        }\n        TestInner inner = new TestInner();\n        inner.InnerMethod(1, 2);\n    }\n    public static void main(String[] args) {\n        Test main = new Test();\n        main.TestMethod();\n    }\n}",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "2",
+      "D": "Lỗi biên dịch"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q073",
+    "chapter": 6,
+    "questionNumber": 73,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\npublic class Test {\n    public void TestMethod() {\n        class TestInner {\n            int x = 0;\n        }\n        System.out.println(x);\n    }\n    public static void main(String[] args) {\n        Test test = new Test();\n        test.TestMethod();\n    }\n}",
+    "options": {
+      "A": "0",
+      "B": "Lỗi biên dịch",
+      "C": "Lỗi thực thi",
+      "D": "Cả 3 đáp án đều sai"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q074",
+    "chapter": 6,
+    "questionNumber": 74,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\npublic class Test {\n    public void method1() {\n        class TestInner {\n            public int x = 0;\n        }\n    }\n    public void method2() {\n        TestInner inner = new TestInner();\n        System.out.println(inner.x);\n    }\n    public static void main(String[] args) {\n        Test test = new Test();\n        test.method2();\n    }\n}",
+    "options": {
+      "A": "0",
+      "B": "Lỗi biên dịch",
+      "C": "Lỗi thực thi",
+      "D": "Cả 3 đáp án đều sai"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q075",
+    "chapter": 6,
+    "questionNumber": 75,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\npublic class Test {\n    static int i = 0;\n    int j = 1;\n\n    public void TestMethod() {\n        final int finalI = i;\n        class TestInner {\n            public void InnerMethod() {\n                System.out.println(finalI);\n            }\n        }\n        TestInner inner = new TestInner();\n        inner.InnerMethod();\n    }\n\n    public static void main(String[] args) {\n        Test test = new Test();\n        test.TestMethod();\n    }\n}",
+    "options": {
+      "A": "0",
+      "B": "Lỗi biên dịch",
+      "C": "Lỗi thực thi",
+      "D": "Cả 3 đáp án đều sai"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q076",
+    "chapter": 6,
+    "questionNumber": 76,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\npublic class Test {\n    public class TestInner {\n        public void print() {\n            System.out.println(\"Hi\");\n        }\n    }\n    public void print() {\n        System.out.println(\"Hello\");\n    }\n    public static void main(String[] args) {\n        Test test = new Test();\n        TestInner testInner = test.new TestInner();\n        testInner.print();\n    }\n}",
+    "options": {
+      "A": "Hello",
+      "B": "Hi",
+      "C": "Lỗi biên dịch",
+      "D": "Lỗi thực thi"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q077",
+    "chapter": 6,
+    "questionNumber": 77,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\npublic class Test {\n    public static void main(String[] args) {\n        One o = new One();\n        o.sayHello();\n    }\n}\nfinal abstract class One {\n    public final void sayHello() {\n        System.out.println(\"Hello\");\n    }\n    public abstract void sayHi();\n}",
+    "options": {
+      "A": "Hello",
+      "B": "Lỗi biên dịch",
+      "C": "Lỗi thực thi",
+      "D": "Cả 3 đáp án đều sai"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q078",
+    "chapter": 6,
+    "questionNumber": 78,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One {\n    String sayHello1(String name) {\n        return \"Hello \" + name;\n    }\n    char[] sayHello2(String name) {\n        return (\"Hello \" + name).toCharArray();\n    }\n}\npublic class Test {\n    public static void main(String[] args) {\n        One one = new One();\n        Object object = one.sayHello2(\"OCAJP\");\n        if (object instanceof String)\n            System.out.println(\"String\");\n        else\n            System.out.println(\"Array\");\n    }\n}",
+    "options": {
+      "A": "Hello OCAJP",
+      "B": "String",
+      "C": "Array",
+      "D": "Lỗi biên dịch"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q079",
+    "chapter": 6,
+    "questionNumber": 79,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One {\n    public void someMethod() throws Exception {\n        System.out.println(\"Exception\");\n    }\n}\nclass Two extends One {\n    public void someMethod() throws Exception {\n        System.out.println(\"Override Exception\");\n    }\n}\npublic class Test {\n    public static void main(String[] args) {\n        One one = new Two();\n        try {\n            one.someMethod();\n        } catch (Exception e) {\n        }\n    }\n}",
+    "options": {
+      "A": "Exception",
+      "B": "Override Exception",
+      "C": "Lỗi biên dịch",
+      "D": "Lỗi thực thi"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH6-Q080",
+    "chapter": 6,
+    "questionNumber": 80,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One \n{\n    public One() \n    {\n        System.out.print(\"One constructor\");\n    }\n    public One(long l) \n    {\n        System.out.print(\"One long constructor\");\n    }\n}\nclass Two extends One \n{\n    public Two(int i)\n    {\n        System.out.print(\"Two int constructor\");\n    }\n    public Two(long l) \n    {\n        System.out.print(\"Two long constructor\");\n    }\n}\npublic class Test \n{\n    public static void main(String[] args) \n    {\n        long value = 68;\n        One one = new Two(value);\n    }\n}",
+    "options": {
+      "A": "Two int constructor",
+      "B": "One long constructor",
+      "C": "One constructorTwo long constructor",
+      "D": "One constructor"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  }
+]

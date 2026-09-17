@@ -1,0 +1,1282 @@
+[
+  {
+    "id": "CH5-Q001",
+    "chapter": 5,
+    "questionNumber": 1,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One\n{\n     int i = 1;\n     public int GetInt()\n     {\n     \treturn i;\n}\n}\nclass Two : One\n{\n     int i = 2;\n     public int GetInt()\n     {\n            return i;\n}\n}\npublic class Test\n{\n    \tpublic static void Main(String[] args)\n    \t{\n         \tOne one = new One();\n         \tTwo two = new Two();\n         \tConsole.WriteLine(two.GetInt());\n    \t}\n}",
+    "options": {
+      "A": "1",
+      "B": "2",
+      "C": "Lỗi biên dịch",
+      "D": "Lỗi thực thi"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q002",
+    "chapter": 5,
+    "questionNumber": 2,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One\n{\n    \tpublic void Print()\n    \t{ \nConsole.WriteLine(\"1\"); \n}\n}\nclass Two : One\n{\n    \tpublic void Print()\n    \t{ \nConsole.WriteLine(\"2\");\n}\n}\npublic class Test\n{\n    \tpublic static void Main(String[] args)\n    \t{\n      \tTwo one = new Two();\n        \tone.Print();\n    \t}\n}",
+    "options": {
+      "A": "1",
+      "B": "2",
+      "C": "Lỗi biên dịch",
+      "D": "Lỗi thực thi"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q003",
+    "chapter": 5,
+    "questionNumber": 3,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One\n{\n     public void Print(int i)\n     {\n     \t\tConsole.WriteLine(\"Parent\");\n     }\t\n}\nclass Two : One\n{\n     public void Print(byte b)\n     {\n      \tConsole.WriteLine(\"Child\");\n    \t}\n}\npublic class Test\n{\npublic static void Main(String[] args)\n    \t{\n        \tTwo one = new Two();\n        \tone.Print(10);\n    \t}\n}",
+    "options": {
+      "A": "Parent",
+      "B": "Child",
+      "C": "Lỗi biên dịch",
+      "D": "Lỗi thực thi"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q004",
+    "chapter": 5,
+    "questionNumber": 4,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One\n{\n        public void Tool(int i)\n        {\n            Console.WriteLine(\"No\");\n        }\n}\nclass Two : One\n{\n    public  void Tool(byte b)\n    {\n        Console.WriteLine(\"Ok\");\n    }\n}\npublic class Test\n{\n    public static void Main(String []args)\n    {    \n        One one = new Two();\n        one.Tool(10);\n    }\n}",
+    "options": {
+      "A": "No",
+      "B": "Ok",
+      "C": "Lỗi biên dịch",
+      "D": "Lỗi thực thi"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q005",
+    "chapter": 5,
+    "questionNumber": 5,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\npublic class One {\n    public static void Tool(int i) {\n        Console.WriteLine(\"No\");\n    }\n}\npublic class Two : One {\n    public static void Tool(byte b) {\n        Console.WriteLine(\"Ok\");\n    }\n}\npublic class Test {\n       public static void Main(String []args){\n        One one = new Two();\n        One.Tool(5);\n    }\n}",
+    "options": {
+      "A": "Ok",
+      "B": "No",
+      "C": "Lỗi biên dịch",
+      "D": "Lỗi thực thi"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q006",
+    "chapter": 5,
+    "questionNumber": 6,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, Lựa chọn nào được viết ở dòng //your code here, khi biên dịch sẽ không có lỗi?\ninterface Inter\n{\n}\nclass One\n{\n}\nclass Two : One\n{\n}\nclass Three : One\n{\n}\nclass Four :Two, Inter\n{\n}\nclass Five : Four\n{\n}\nclass Six : Three\n{\n}\npublic class Test\n{\n    public static void main(String[] args)\n    {\n        // your code here\n    }\n}",
+    "options": {
+      "A": "Inter inter = new One();",
+      "B": "Inter inter = new Two ();",
+      "C": "Inter inter = new Three();",
+      "D": "Inter inter = new Four();"
+    },
+    "correctAnswer": "D",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q007",
+    "chapter": 5,
+    "questionNumber": 7,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, lựa chọn nào được viết ở dòng //your code here, khi biên dịch sẽ không có lỗi?\ninterface Inter\n{\n}\nclass One\n{\n}\nclass Two : One\n{\n}\nclass Three : One\n{\n}\nclass Four : Two, Inter\n{\n}\nclass Five : Four\n{\n}\nclass Six : Three\n{\n}\npublic class Test\n{\n    public static void Main(String[] args)\n    {\n        // your code here\n    }\n}",
+    "options": {
+      "A": "Inter inter = new Four();",
+      "B": "Inter inter = new Inter ();",
+      "C": "Six six = new Three ();",
+      "D": "Three three = new One();"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q008",
+    "chapter": 5,
+    "questionNumber": 8,
+    "question": "Cho chương trình viết bằng ngôn ngữ  C# như sau, khi biên dịch và thực thi chương trình, kết quả là gì?\nclass One\n{\n}\nclass Two : One\n{\n   public void Print()\n   {\n      Console.WriteLine(\"Two\");\n   }\n}\npublic class Test\n{\n    public static void Main(String[] args)\n    {\n        Two one = new Two();\n        one.Print();\n    }\n}",
+    "options": {
+      "A": "Two",
+      "B": "Lỗi biên dịch",
+      "C": "Lỗi thực thi",
+      "D": "Cả 3 đáp án đều sai"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q009",
+    "chapter": 5,
+    "questionNumber": 9,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One\n{\n        int x = 10;\n        public  One(int x)\n        {\n            \tthis.x = x++;\n        }\n}\npublic class Test\n{\n        public static void Main(String[] args)\n        {  \n            \tOne one = new One(20);\n             \tConsole.WriteLine(one.x);\n        }\n}",
+    "options": {
+      "A": "1",
+      "B": "0",
+      "C": "6",
+      "D": "Lỗi biên dịch"
+    },
+    "correctAnswer": "D",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q010",
+    "chapter": 5,
+    "questionNumber": 10,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One\n{\n        public One(int x)\n        {\n            \tConsole.WriteLine(\"int constructor\");\n        }\n        public One(long l)\n        {\n            \tConsole.WriteLine(\"long constructor\");\n        }\n}\npublic class Test\n{\n        public static void Main(String[] args)\n        {\n            long l = 201;\n           \t\t One one = new One(l);\n        }\n}",
+    "options": {
+      "A": "int constructor",
+      "B": "long constructor int constructor",
+      "C": "long constructor long constructor",
+      "D": "long constructor"
+    },
+    "correctAnswer": "D",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q011",
+    "chapter": 5,
+    "questionNumber": 11,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One\n{\n    public One()\n    {\n        Console.WriteLine(\"One constructor\");\n    }\n    public One(long l)\n    {\n        Console.WriteLine(\"One long constructor\");\n    }\n}\nclass Two : One\n{\n    public Two(int i)\n    {\n        Console.WriteLine(\"Two int constructor\");\n    }\n    public Two(long l)\n    {\n        Console.WriteLine(\"Two long constructor\");\n    }\n}\npublic class Test\n{\n    public static void Main(String[] args)\n    {\n        long value = 68;\n        One one = new Two(value);\n    }\n}",
+    "options": {
+      "A": "Two int constructor",
+      "B": "One long constructor",
+      "C": "One constructor - Two long constructor",
+      "D": "One constructor"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q012",
+    "chapter": 5,
+    "questionNumber": 12,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One\n{\n        public One(int x)\n        {\n          \t\tConsole.WriteLine(\"int constructor\");\n        }\n        public One(char c)\n        {\n            \tConsole.WriteLine(\"char constructor\");\n        }\n        void Two(String str)\n        {\n            \tConsole.WriteLine(\"String constructor\");\n        }\n}\npublic class Test\n{\n        public static void Main(String[] args)\n        {\n            \tString ch = \"c\";\n            \tOne one = new One(1);\n        }\n}",
+    "options": {
+      "A": "char constructor",
+      "B": "int constructor",
+      "C": "Lỗi biên dịch",
+      "D": "Cả 3 đáp án đều sai"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q013",
+    "chapter": 5,
+    "questionNumber": 13,
+    "question": "Khi bạn biên dịch và chạy chương trình viết bằng ngôn ngữ C# bằng lệnh đã cho ở bên dưới sau kết quả sẽ là:\nclass ITestInterface\n{\n        int status = 0;\n}\npublic class Test : ITestInterface\n{\npublic static void Main(String[] args)\n{\n\tTest t = new Test();\n     \tt.status = 69;\n         \tConsole.WriteLine(t.status);\n}\n}",
+    "options": {
+      "A": "1",
+      "B": "0",
+      "C": "2",
+      "D": "Lỗi biên dịch (vì status là private)"
+    },
+    "correctAnswer": "D",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q014",
+    "chapter": 5,
+    "questionNumber": 14,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\npublic class ITestInterface\n{\n        int i = 0;\n        public ITestInterface()\n        {\n            \tConsole.WriteLine(\"I Constructor \");\n        }\n}\npublic class Test : ITestInterface\n{\n        public Test()\n        {\n            \tConsole.WriteLine(\"Test Constructor \");\n        }\n        public static void Main(String[] args)\n        {\n            \tTest t = new Test();\n        }\n}",
+    "options": {
+      "A": "Test Constructor",
+      "B": "I Constructor Test Constructor",
+      "C": "T Constructor I Constructor",
+      "D": "Lỗi biên dịch"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q015",
+    "chapter": 5,
+    "questionNumber": 15,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nGiải thích đoạn code sau:\nclass One\n{\n        String SayHello1(String name)\n        {\n            return \"Hello \" + name;\n        }\n        char[] SayHello2(String name)\n        {\n            return (\"Hello \" + name).ToCharArray();\n        }\n}\npublic class Test\n{\n        public static void Main(String[] args)\n        {\n            One one = new One();\n            Object[] ob = one.SayHello2(\"Hhâ\");\n            if (ob instance String)\n                {\n                Console.WriteLine(\"String\");\n            }\n        else\n            {\n                Console.WriteLine(\"Array\");\n            }  \n        }\n}",
+    "options": {
+      "A": "Hello OCAJP",
+      "B": "String",
+      "C": "Array",
+      "D": "Lỗi biên dịch"
+    },
+    "correctAnswer": "D",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q016",
+    "chapter": 5,
+    "questionNumber": 16,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One\n    {\n        public void Greetings()\n        {\n            Console.WriteLine(\"Hello\");\n        }\n    }\n    class Two : One\n    {\n        public void Greetings()\n        {\n            Console.WriteLine(\"Hi\");\n        }\n    }\n    public class Test\n    {\n        public static void Main(String[] args)\n        {\n            One one = new Two();\n            one.Greetings();\n        }\n    }",
+    "options": {
+      "A": "Hello",
+      "B": "Hi",
+      "C": "Lỗi biên dịch",
+      "D": "Lỗi thực thi"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q017",
+    "chapter": 5,
+    "questionNumber": 17,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One\n    {\n        public One()\n        {\n          Console.WriteLine(\"Hello Object\");\n        }\n        public One(int x)\n        {  \n         Console.WriteLine(\"Hello Object with int\");\n        }\n    }\n    public class Test\n    {\n        public static void Main(String[] args)\n        {\n            One one = new One();\n        }\n    }",
+    "options": {
+      "A": "Hello Object with int",
+      "B": "Hello Object",
+      "C": "Hello Object with int Hello Object",
+      "D": "Hello Object Hello Object with int"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q018",
+    "chapter": 5,
+    "questionNumber": 18,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One\n    {\n        public One(int i)\n        {\n           Console.WriteLine(\"int\");\n        }\n        public  One(short s)\n        {\n            Console.WriteLine(\"short\");\n        }\n    }\n    public class Test\n    {\n        public static void Main(String[] args)\n        {\n            short s = 10;\n            One one = new One(s);\n        }\n    }",
+    "options": {
+      "A": "int short",
+      "B": "short",
+      "C": "int",
+      "D": "short int"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q019",
+    "chapter": 5,
+    "questionNumber": 19,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One\n    {\n        public void ClassName()\n        {\n            Console.WriteLine(\"Parent\");\n        }\n    }\n    class Two : One\n    {\n    public void ClassName()\n    {\n       Console.WriteLine(\"Child\");\n    }\n}\npublic class Test\n{\n    public static void Main(String[] args)\n    {\n        One one = new Two();\n        one.ClassName();\n    }\n}",
+    "options": {
+      "A": "Parent",
+      "B": "Child Parent",
+      "C": "Parent Child",
+      "D": "Child"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q020",
+    "chapter": 5,
+    "questionNumber": 20,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One\n{\n    public void Greetings()\n    {\n        Console.WriteLine(\"Hello\");\n    }\n}\nclass Two : One\n{\n    public void Greetings()\n    {\n        Console.WriteLine(\"Hi\");\n    }\n}\npublic class Test\n{\n    public static void Main(String[] args)\n    {\n        Two one = new Two();\n        one.Greetings();\n    }\n}",
+    "options": {
+      "A": "Hello",
+      "B": "Hello Hi",
+      "C": "Hi Hello",
+      "D": "Hi"
+    },
+    "correctAnswer": "D",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q021",
+    "chapter": 5,
+    "questionNumber": 21,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One\n{\n    public void Greetings()\n    {\n        Console.WriteLine(\"Hello\");\n    }\n}\nclass Two : One\n{\n    public void Greetings()\n    {\n        Console.WriteLine(\"Hi\");\n    }\n}\npublic class Test\n{\n    public static void Main(String[] args)\n    {\n        One one = new One();\n        one.Greetings();\n    }\n}",
+    "options": {
+      "A": "Hello",
+      "B": "Hi",
+      "C": "Lỗi biên dịch",
+      "D": "Lỗi thực thi"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q022",
+    "chapter": 5,
+    "questionNumber": 22,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One\n{\n    public void ClassName()\n    {\n        Console.WriteLine(\"Parent\");\n    }\n}\nclass Two : One\n{\n    public void ClassName()\n    {\n        Console.WriteLine(\"Child\");\n    }\n}\npublic class Test\n{\n    public static void Main(String[] args)\n    {\n        One one = new Two();\n        one.ClassName();\n    }\n}",
+    "options": {
+      "A": "Parent",
+      "B": "Child",
+      "C": "Lỗi biên dịch",
+      "D": "Lỗi thực thi"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q023",
+    "chapter": 5,
+    "questionNumber": 23,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One\n{\n    private void CallMe()\n    {\n        Console.WriteLine(\"Parent\");\n    }\n    public void Caller()\n    {\n        CallMe();\n    }\n}\nclass Two : One\n{\n    public void CallMe()\n    {\n        Console.WriteLine(\"Child\");\n    }\n}\npublic class Test\n{\n    public static void Main(String[] args)\n    {\n        Two two = new Two();\n        two.Caller();\n    }\n}",
+    "options": {
+      "A": "Parent",
+      "B": "Child",
+      "C": "Parent Child",
+      "D": "Lỗi biên dịch"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q024",
+    "chapter": 5,
+    "questionNumber": 24,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One\n{\n    public int Method()\n    {\n        Console.WriteLine(\"int\");\n        return 0;\n    }\n}\nclass Two : One\n{\n    public int Method()\n    {\n        Console.WriteLine(\"short\");\n        return 1;\n    }\n}\npublic class Test\n{\n    public static void Main(String[] args)\n    {\n        One one = new Two();\n        one.Method();\n    }\n}",
+    "options": {
+      "A": "int",
+      "B": "short",
+      "C": "Lỗi biên dịch",
+      "D": "Lỗi thực thi"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q025",
+    "chapter": 5,
+    "questionNumber": 25,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One\n{\n    public void SomeMethod()\n    {\n        Console.WriteLine(\"Exception\");\n    }\n}\nclass Two : One\n{\n    public void SomeMethod()\n    {\n        Console.WriteLine(\"Not Exception\");\n    }\n    public static void Main(String[] args)\n    {\n        One one = new Two();\n        one.SomeMethod();\n    }\n}",
+    "options": {
+      "A": "Exception",
+      "B": "Not Exception",
+      "C": "Lỗi biên dịch",
+      "D": "Lỗi thực thi"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q026",
+    "chapter": 5,
+    "questionNumber": 26,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One\n{\n    public void SomeMethod()\n    {\n        Console.WriteLine(\"Exception\");\n    }\n}\nclass Two : One\n{\n    public void SomeMethod()\n    {\n        Console.WriteLine(\"Override Exception\");\n    }\n}\npublic class Test\n{\n    public static void Main(String[] args)\n    {\n        Two one = new Two();\n        try\n        {\n            one.SomeMethod();\n        }\n        catch (Exception e)\n        {\n        }\n    }\n}",
+    "options": {
+      "A": "Exception",
+      "B": "Override Exception",
+      "C": "Lỗi biên dịch",
+      "D": "Lỗi thực thi"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q027",
+    "chapter": 5,
+    "questionNumber": 27,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One\n{\n    public One()\n    {\n        Console.WriteLine(\"One,\");\n    }\n}\nclass Two : One\n{\n    void Four()\n    {\n        Console.WriteLine(\"Two,\");\n    }\n}\nclass Three : Two\n{\n    public Three()\n    {\n        Console.WriteLine(\"Three,\");\n    }\n}\npublic class Test\n{\n    public static void Main(String[] args)\n    {\n        Three three = new Three();\n    }\n}",
+    "options": {
+      "A": "One,Two,Three,",
+      "B": "Three,Two,One,",
+      "C": "One,Three,",
+      "D": "Lỗi biên dịch"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q028",
+    "chapter": 5,
+    "questionNumber": 28,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, Lựa chọn nào nếu được viết ở dòng //method declaration here, sẽ được gọi là nạp chồng (override) phương thức someMethod được định nghĩa trong lớp One\nclass One\n{\n    public void SomeMethod(int i)\n    {\n    }\n}\nclass Two : One\n{\n    public void SomeMethod(double anotherint)\n    {\n    }\n    //method declaration here\n}\npublic class Test\n{\n    public static void Main(String[] args)\n    {\n        Two two = new Two();\n    }\n}",
+    "options": {
+      "A": "void public someMethod(int i){}",
+      "B": "public void someMethod(int anotherint){}",
+      "C": "public void Somemethod(String str){}",
+      "D": "public void someMethod(double anotherint){}"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q029",
+    "chapter": 5,
+    "questionNumber": 29,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One\n{\n    void Two()\n    {\n        Console.WriteLine(\"One,\");\n    }\n}\nclass Two : One\n{\n    void One()\n    {\n        Console.WriteLine(\"Two,\");\n    }\n}\nclass Three : Two\n{\n    public void Four()\n    {\n        Console.WriteLine(\"Three,\");\n    }\n}\npublic class Test\n{\n    public static void Main(String[] args)\n    {\n        Three three = new Three();\n        three.Four();\n    }\n}",
+    "options": {
+      "A": "One,Two,Three,",
+      "B": "Three,Two,One,",
+      "C": "Three,",
+      "D": "Cả 3 đáp án đều sai"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q030",
+    "chapter": 5,
+    "questionNumber": 30,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\npublic class Test\n{\n    public static void Main(String[] args)\n    {\n        int i = 68;\n        Console.WriteLine(++i);\n    }\n}",
+    "options": {
+      "A": "69",
+      "B": "68",
+      "C": "Lỗi biên dịch",
+      "D": "Cả 3 đáp án đều sai"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q031",
+    "chapter": 5,
+    "questionNumber": 31,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nabstract class Tesst\n{\n    public void SomeThing()\n    {\n        Console.WriteLine(\"Something\");\n    }\n    public void NoThing();\n}\nclass TestChild : Tesst\n{\n    public void NoThing()\n    {\n        Console.WriteLine(\"Nothing\");\n    }\n}\npublic class Test\n{\n    public static void Main(String[] args)\n    {\n        TestChild testChild = new TestChild();\n        testChild.SomeThing();\n    }\n}",
+    "options": {
+      "A": "Nothing",
+      "B": "Something",
+      "C": "Lỗi biên dịch",
+      "D": "Lỗi thực thi"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q032",
+    "chapter": 5,
+    "questionNumber": 32,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\npublic class Test\n{\n    String name = \"Test\";\n    public Test()\n    {\n        name = \"TestObject\";\n    }\n    public static void Main(String[] args)\n    {\n        Test test = new Test();\n        Console.WriteLine(\"Name is \" + test.name);\n    }\n}",
+    "options": {
+      "A": "Name is Test",
+      "B": "Name is TestObject",
+      "C": "Lỗi biên dịch",
+      "D": "Cả 3 đáp án đều sai"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q033",
+    "chapter": 5,
+    "questionNumber": 33,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\npublic class Test\n{\n    static String name = \"Test\";\n    public Test()\n    {\n        name = \"TestObject\";\n    }\n    public static void Main(String[] args)\n    {\n        Console.WriteLine(\"Name is \" + name);\n    }\n}",
+    "options": {
+      "A": "Name is Test",
+      "B": "Name is TestObject",
+      "C": "Lỗi biên dịch",
+      "D": "Cả 3 đáp án đều sai"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q034",
+    "chapter": 5,
+    "questionNumber": 34,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\npublic class One\n{\n    public One()\n    {\n        Console.WriteLine(\"Abstract Class\");\n    }\n    abstract void Nothing();\n}\npublic class Test\n{\n    public static void Main(String[] args)\n    {\n        One one = new One();\n    }\n}",
+    "options": {
+      "A": "Abstract Class",
+      "B": "Lỗi biên dịch",
+      "C": "Lỗi thực thi",
+      "D": "Cả 3 đáp án đều sai"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q035",
+    "chapter": 5,
+    "questionNumber": 35,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\npublic class One\n{\n    public One()\n    {\n        Console.WriteLine(\"One\");\n    }\n}\npublic class Test\n{\n    public static void Main(String[] args)\n    {\n        One one = new One();\n    }\n}",
+    "options": {
+      "A": "One",
+      "B": "Lỗi biên dịch",
+      "C": "Lỗi thực thi",
+      "D": "Cả 3 đáp án đều sai"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q036",
+    "chapter": 5,
+    "questionNumber": 36,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One\n{\n    public One(String name)\n    {\n        Console.WriteLine(\"Hello \" + name + \",\");\n    }\n}\nclass Two : One\n{\n    public Two() : base(\"Alice\")\n    {\n        Console.WriteLine(\"Hi,\");\n    }\n}\npublic class Test\n{\n    public static void Main(String[] args)\n    {\n        Two two = new Two();\n    }\n}",
+    "options": {
+      "A": "Hi,",
+      "B": "Alice",
+      "C": "Hello Alice,Hi,",
+      "D": "Cả 3 đáp án đều sai"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q037",
+    "chapter": 5,
+    "questionNumber": 37,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One\n{\n    public One(String name)\n    {\n        Console.WriteLine(\"Hello \" + name + \",\");\n    }\n}\nclass Two : One\n{\n    public Two() : base(\"Two\")\n    {\n        Console.WriteLine(\"Hi,\");\n    }\n}\npublic class Test\n{\n    public static void Main(String[] args)\n    {\n        Two two = new Two();\n    }\n}",
+    "options": {
+      "A": "Hi,",
+      "B": "Hello Two,Hi,",
+      "C": "Lỗi biên dịch",
+      "D": "Cả 3 đáp án đều sai"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q038",
+    "chapter": 5,
+    "questionNumber": 38,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\npublic class One\n{\n    public One(String name)\n    {\n        Console.WriteLine(\"Hello \" + name + \",\");\n    }\n}\nclass Two : One\n{\n    public Two() : base(\"Two\")\n    {\n        Console.WriteLine(\"Hi,\");\n    }\n}\npublic class Test\n{\n    public static void Main(String[] args)\n    {\n        One two = new Two();\n    }\n}",
+    "options": {
+      "A": "Hi,",
+      "B": "Hi,Hello Two,",
+      "C": "Hello Two,Hi,",
+      "D": "Cả 3 đáp án đều sai"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q039",
+    "chapter": 5,
+    "questionNumber": 39,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One\n{\n    public One(String name)\n    {\n        Console.WriteLine(\"Hello \" + name + \",\");\n    }\n}\nclass Two : One\n{\n    public Two() : base(\"Two\")\n    {\n        Console.WriteLine(\"Hi,\");\n    }\n}\npublic class Test\n{\n    public static void Main(String[] args)\n    {\n        One two = new One();\n    }\n}",
+    "options": {
+      "A": "Cả 3 đáp án đều sai",
+      "B": "Hello",
+      "C": "Lỗi biên dịch",
+      "D": "Lỗi thực thi"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q040",
+    "chapter": 5,
+    "questionNumber": 40,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One\n{\n    public One()\n    {\n        Console.WriteLine(\"Parent \");\n    }\n}\nclass Two : One\n{\n    public Two()\n    {\n        Console.WriteLine(\"Child \");\n    }\n}\npublic class Test\n{\n    public static void Main(String[] args)\n    {\n        One one = new Two();\n    }\n}",
+    "options": {
+      "A": "Parent Child",
+      "B": "Child Parent",
+      "C": "Child",
+      "D": "Parent"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q041",
+    "chapter": 5,
+    "questionNumber": 41,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass TestChild : Test\n{\n    public TestChild()\n    {\n        Console.WriteLine(\"TestChild1 \");\n    }\n}\npublic class Test\n{\n    void TestChild()\n    {\n        Console.WriteLine(\"TestChild2 \");\n    }\n    public static void Main(String[] args)\n    {\n        new Test().TestChild();\n    }\n}",
+    "options": {
+      "A": "TestChild1 TestChild2",
+      "B": "TestChild2 TestChild1",
+      "C": "TestChild2",
+      "D": "Cả 3 đáp án đều sai"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q042",
+    "chapter": 5,
+    "questionNumber": 42,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\npublic class Test\n{\n     int i = 68;\n     void Print()\n     {\n         Console.WriteLine(i);\n     }\n     public static void Main(String[] args)\n     {\n         new Test().Print();\n     }\n}",
+    "options": {
+      "A": "0",
+      "B": "68",
+      "C": "Lỗi thực thi",
+      "D": "Lỗi biên dịch"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q043",
+    "chapter": 5,
+    "questionNumber": 43,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\npublic class One\n{\n        public void SayHello()\n        {\n            Console.WriteLine(\"Parent Hello\");\n        }\n}\nclass Two : One\n{\n        public void SayHello()\n        {\n            Console.WriteLine(\"Child Hello\");\n        }\n}\npublic class Test\n{\n        public static void Main(String[] args)\n        {\n            One o = new Two();\n            o.SayHello();\n        }\n}",
+    "options": {
+      "A": "Parent Hello",
+      "B": "Child Hello",
+      "C": "Lỗi biên dịch",
+      "D": "Cả 3 đáp án đều sai"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q044",
+    "chapter": 5,
+    "questionNumber": 44,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\npublic class Test\n{\n     public int Count(int i)\n     {\n         return 0;\n     }\n     public long Count(long i)\n     {\n         return 0L;\n     }\n     public static void Main(String[] args)\n     {\n         Test test = new Test();\n         int resultInt = test.Count(5);\n         long resultLong = test.Count(6);\n         Console.WriteLine(resultInt);\n         Console.WriteLine(resultLong);\n     }\n}",
+    "options": {
+      "A": "5",
+      "B": "6",
+      "C": "0",
+      "D": "00"
+    },
+    "correctAnswer": "D",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q045",
+    "chapter": 5,
+    "questionNumber": 45,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\npublic class Test\n{\n     public int Count(int i)\n     {\n         return 0;\n     }\n     public static void Main(String[] args)\n     {\n         Test test = new TestChild();\n         int resultInt = test.Count(5);\n         Console.WriteLine(\"Result for int: \" + resultInt);\n     }\n}\nclass TestChild : Test\n{\n     public int Count(int i)\n     {\n         return 1;\n     }\n}",
+    "options": {
+      "A": "Lỗi biên dịch",
+      "B": "Lỗi thực thi",
+      "C": "Result for int: 0",
+      "D": "Result for int: 1"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q046",
+    "chapter": 5,
+    "questionNumber": 46,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One\n{\n        public void SayHello()\n        {\n            Console.WriteLine(\"Parent Hello\");\n        }\n}\nclass Two : One\n{\n        public void SayHello()\n        {\n            Console.WriteLine(\"Child Hello\");\n        }\n}\npublic class Test\n{\n        public static void Main(String[] args)\n        {\n            One o = new Two();\n            o.SayHello();\n        }\n}",
+    "options": {
+      "A": "Parent Hello",
+      "B": "Child Hello",
+      "C": "Lỗi biên dịch",
+      "D": "Lỗi thực thi"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q047",
+    "chapter": 5,
+    "questionNumber": 47,
+    "question": "Cho chương trình viết bằng ngôn ngữ C#  như sau, khi biên dịch và thực thi chương trình, kết quả là gì?\npublic class Test\n{\n    public int Count(int i)\n    {\n        return 0;\n    }\n    public int Count(double j)\n    {\n        return 1;\n    }\n    public static void Main(String[] args)\n    {\n        Test test = new Test();\n        int i = test.Count(5);\n        int d = test.Count(5.0);\n        Console.WriteLine(\"int: \" + i);\n        Console.WriteLine(\"double: \" + d);\n    }\n}",
+    "options": {
+      "A": "int: 0",
+      "B": "double: 0",
+      "C": "int: 0 double: 0",
+      "D": "int: 0 double: 1"
+    },
+    "correctAnswer": "D",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q048",
+    "chapter": 5,
+    "questionNumber": 48,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\npublic class One\n{\n      public void Count(int i)\n      {\n            Console.WriteLine(0);\n      }\n}\npublic class Test : One\n{\npublic void Count(int j)\n      {\n            Console.WriteLine(1);\n      }\n      public static void Main(String[] args)\n      {\n            One one = new Test(); one.Count(0);\n    \t}\n}",
+    "options": {
+      "A": "1",
+      "B": "0",
+      "C": "Lỗi biên dịch",
+      "D": "Lỗi thực thi"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q049",
+    "chapter": 5,
+    "questionNumber": 49,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\npublic class Test\n{\n    public static void Main(String[] args)\n    {\n        One o = new One();\n        o.SayHello();\n    }\n}\npublic class One\n{\n    public void SayHello()\n    {\n        Console.WriteLine(\"Hello\");\n    }\n}",
+    "options": {
+      "A": "Hello",
+      "B": "Lỗi biên dịch",
+      "C": "Lỗi thực thi",
+      "D": "Cả 3 đáp án đều sai"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q050",
+    "chapter": 5,
+    "questionNumber": 50,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\npublic class Test\n{\n    class TestInner\n    {\n        public void SayHi()\n        {\n            Console.WriteLine(\"Hi\");\n        }\n    }\n    public static void Main(String[] args)\n    {\n        TestInner inner = new TestInner();\n        inner.SayHi();\n    }\n}",
+    "options": {
+      "A": "Hi",
+      "B": "Lỗi biên dịch",
+      "C": "Lỗi thực thi",
+      "D": "Cả 3 đáp án đều sai"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q051",
+    "chapter": 5,
+    "questionNumber": 51,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\npublic class Test\n{\n    class TestInner\n    {\n        public void SayHi()\n        {\n            Console.WriteLine(\"Hi\");\n        }\n    }\n    public static void Main(String[] args)\n    {\n        Test t = new Test();\n    }\n}",
+    "options": {
+      "A": "Hi",
+      "B": "Lỗi biên dịch",
+      "C": "Lỗi thực thi",
+      "D": "Cả 3 đáp án đều sai"
+    },
+    "correctAnswer": "D",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q052",
+    "chapter": 5,
+    "questionNumber": 52,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\npublic class Test\n    {\n        public void Compute(int i, int j)\n        {\n           Console.WriteLine(\"int version\");\n        }\n        public void Compute(long i, long j)\n        {\n            Console.WriteLine(\"long version\");\n        }\n        public static void Main(String[] args)\n        {\n            Test t = new Test();\n            t.Compute(10, 5);\n        }\n    }",
+    "options": {
+      "A": "int version",
+      "B": "long version",
+      "C": "Lỗi biên dịch",
+      "D": "Lỗi thực thi"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q053",
+    "chapter": 5,
+    "questionNumber": 53,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, Lựa chọn nào được viết ở dòng //access variable here, khi biên dịch sẽ không có lỗi?\npublic class Test\n{\n    private int i = 0;\n    int j = 1;\n    public int k = 2;\n    public class TestInner\n    {\n        private int l = 3;\n        int m = 4;\n        public int n = 5;\n        void SayHi()\n        {\n            //access variable here\n        }\n    }\n    public static void Main(String [] args)\n    {\n    }\n}",
+    "options": {
+      "A": "i = 5;",
+      "B": "j = 5;",
+      "C": "k = 5;",
+      "D": "Cả 3 đáp án đều sai"
+    },
+    "correctAnswer": "D",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q054",
+    "chapter": 5,
+    "questionNumber": 54,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One\n{\n    public void Process()\n    {\n        Console.WriteLine(\"Parent \");\n    }\n}\nclass Two : One\n{\n    public static void Process()\n    {\n        Console.WriteLine(\"Child\");\n    }\n}\npublic class Test\n{\n    public static void Main(String[] args)\n    {\n        One one = new Two();\n        one.Process();\n    }\n}",
+    "options": {
+      "A": "Parent",
+      "B": "Child",
+      "C": "Parent Child",
+      "D": "Lỗi biên dịch"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q055",
+    "chapter": 5,
+    "questionNumber": 55,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\npublic class Test\n    {\n        private int i = 0;\n        class TestInner\n        {\n            public int i = 1;\n           public void SayHi()\n            {\n               Console.WriteLine(i);\n            }\n        }\n        public static void Main(String[] args)\n        {\n            TestInner inner = new TestInner();\n            inner.SayHi();\n        }\n    }",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "Lỗi biên dịch",
+      "D": "Lỗi thực thi"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q056",
+    "chapter": 5,
+    "questionNumber": 56,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One\n{\n    public One()\n    {\n        Console.WriteLine(\" One \");\n    }\n}\nclass Two : One\n{\n    public Two()\n    {\n        Console.WriteLine(\" Two \");\n    }\n}\npublic class Test\n{\n    public static void Main(String[] args)\n    {\n        One one = new One();\n        Two two = new Two();\n    }\n}",
+    "options": {
+      "A": "One",
+      "B": "Two",
+      "C": "One Two",
+      "D": "One One Two"
+    },
+    "correctAnswer": "D",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q057",
+    "chapter": 5,
+    "questionNumber": 57,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\ninterface TestInterface\n{\n}\nclass TestImplementation : TestInterface\n{\n    public TestImplementation()\n    {\n        Console.WriteLine(\"TestImplementation\");\n    }\n}\nclass Test\n{\n    public static void Main(String[] args)\n    {\n        TestImplementation implementation = new TestImplementation();\n    }\n}",
+    "options": {
+      "A": "TestImplementation",
+      "B": "Hello, world!",
+      "C": "Lỗi biên dịch",
+      "D": "Lỗi thực thi"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q058",
+    "chapter": 5,
+    "questionNumber": 58,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\ninterface TestInterface\n{\n    void SomeMethod();\n    class Test\n    {\n        public void Display()\n        {\n            Console.WriteLine(\"Test class.\");\n        }\n    }\n}\npublic class Test\n{\n    public static void Main(String[] args)\n    {\n        TestInterface.Test testObj = new TestInterface.Test();\n        testObj.Display();\n    }\n}",
+    "options": {
+      "A": "Test class.",
+      "B": "Hello, world!",
+      "C": "Lỗi biên dịch",
+      "D": "Lỗi thực thi"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q059",
+    "chapter": 5,
+    "questionNumber": 59,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One\n{\n    public abstract One();\n}\nclass Two : One\n{\n    public Two()\n    {\n        Console.WriteLine(\"Two\");\n    }\n}\npublic class Test\n{\n    public static void main(String[] args)\n    {\n        Two two = new Two();\n    }\n}",
+    "options": {
+      "A": "Two",
+      "B": "One",
+      "C": "Lỗi biên dịch",
+      "D": "Lỗi thực thi"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q060",
+    "chapter": 5,
+    "questionNumber": 60,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass TestInterface\n{\n    public class Test\n    {\n        public void Display()\n        {\n            Console.WriteLine(\"Test class.\");\n        }\n    }\n}\npublic class Test\n{\n    public static void Main(String[] args)\n    {\n        TestInterface.Test testObj = new TestInterface.Test();\n        testObj.Display();\n    }\n}",
+    "options": {
+      "A": "Test class.",
+      "B": "Lỗi biên dịch",
+      "C": "Lỗi thực thi",
+      "D": "Cả 3 đáp án đều sai"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q061",
+    "chapter": 5,
+    "questionNumber": 61,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One\n{\n    int i = 1;\n    public One()\n    {\n        Console.WriteLine(i);\n    }\n}\nclass Two : One\n{\n    int i = 10;\n    public void One()\n    {\n        Console.WriteLine(i);\n    }\n}\npublic class Test\n{\n    public static void Main(String[] args)\n    {\n        One one = new Two();\n    }\n}",
+    "options": {
+      "A": "1",
+      "B": "10",
+      "C": "Lỗi biên dịch",
+      "D": "Lỗi thực thi"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q062",
+    "chapter": 5,
+    "questionNumber": 62,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One\n{\n}\nclass Two : One\n{\n}\npublic class Test\n{\n    public static void Main(String[] args)\n    {\n        One one = new One();\n        Two two = new Two();\n       Console.WriteLine( one);\n    }\n}",
+    "options": {
+      "A": "true",
+      "B": "false",
+      "C": "Cả 3 đáp án đều sai",
+      "D": "Lỗi biên dịch"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q063",
+    "chapter": 5,
+    "questionNumber": 63,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One\n    {\n        public One()\n        {\n            Console.WriteLine(\"One\");\n        }\n    }\n    class Two : One\n    {\n    public Two()\n    {\n        Console.WriteLine(\"Two\");\n    }\n}\nclass Three\n{\n    Two two = new Two();\n    public Three()\n    {\n        Console.WriteLine(\"Three\");\n    }\n}\npublic class Test\n{\n    public static void Main(String[] args)\n    {\n        Three three = new Three();\n    }\n}",
+    "options": {
+      "A": "ThreeTwoOne",
+      "B": "ThreeOneTwo",
+      "C": "OneTwoThree",
+      "D": "Cả 3 đáp án đều sai"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q064",
+    "chapter": 5,
+    "questionNumber": 64,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass TestInner\n    {\n        public void Print()\n        {\n            Console.WriteLine(\"Hi\");\n        }\n    }\n    public class Test\n    {\n        public static void Main(String[] args)\n        {\n            TestInner t = new TestInner();\n            \n             void Print()\n            {\n              Console.WriteLine(\"Hello\");\n            }\n            t.Print();\n        }  \n    }",
+    "options": {
+      "A": "Hi",
+      "B": "Hello",
+      "C": "Lỗi biên dịch",
+      "D": "Cả 3 đáp án đều sai"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q065",
+    "chapter": 5,
+    "questionNumber": 65,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\npublic class One\n{\n    string className = \"One\";\n}\npublic class Two : One\n{\n    string className = \"Two\";\n}\npublic class Test\n{\n    public static void Main(String[] args)\n    {\n        One one = new Two();\n        Console.WriteLine(one.className);\n    }\n}",
+    "options": {
+      "A": "One",
+      "B": "Two",
+      "C": "Lỗi biên dịch",
+      "D": "Lỗi thực thi"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q066",
+    "chapter": 5,
+    "questionNumber": 66,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass One\n{\n    public One()\n    {\n        Console.WriteLine(\"One\");\n    }\n    public One(String str)\n    {\n        Console.WriteLine(\"OneStr\");\n    }\n}\nclass Two : One\n{\n    public Two(String str) : base(str)\n    {\n        Console.WriteLine(\"TwoStr\");\n    }\n}\npublic class Test\n{\n    public static void Main(String[] args)\n    {\n        Two two = new Two(\"Hello\");\n    }\n}",
+    "options": {
+      "A": "OneTwoStrOneStr",
+      "B": "TwoStrOneStr",
+      "C": "OneStrTwoStr",
+      "D": "Lỗi biên dịch"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q067",
+    "chapter": 5,
+    "questionNumber": 67,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\npublic class Test\n{\n    public void DoNothing(Object ob)\n    {\n        Console.WriteLine(\"Object\");\n    }\n    public void DoNothing(String str)\n    {\n        Console.WriteLine(\"String\");\n    }\n    public static void Main(String[] args)\n    {\n        Test test = new Test();\n        test.DoNothing(args);\n    }\n}",
+    "options": {
+      "A": "String",
+      "B": "Object",
+      "C": "Cả 3 đáp án đều sai",
+      "D": "Lỗi biên dịch"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q068",
+    "chapter": 5,
+    "questionNumber": 68,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\npublic class Test\n{\n    public void DoNothing(Object ob)\n    {\n        Console.WriteLine(\"Object\");\n    }\n    public void DoNothing(int i)\n    {\n        Console.WriteLine(\"Integer\");\n    }\n    public static void Main(String[] args)\n    {\n        Test test = new Test();\n        test.DoNothing(5);\n    }\n}",
+    "options": {
+      "A": "Integer",
+      "B": "Object",
+      "C": "String",
+      "D": "Cả 3 đáp án đều sai"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q069",
+    "chapter": 5,
+    "questionNumber": 69,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\npublic class Test\n{\n    public void DoNothing(Object ob)\n    {\n        Console.WriteLine(\"Object\");\n    }\n    public void DoNothing(int i)\n    {\n        Console.WriteLine(\"Integer\");\n    }\n    public void DoNothing(Double d)\n    {\n        Console.WriteLine(\"Double\");\n    }\n    public static void Main(String[] args)\n    {\n        Test test = new Test();\n        test.DoNothing(new Test());\n    }\n}",
+    "options": {
+      "A": "Object",
+      "B": "Integer",
+      "C": "Double",
+      "D": "Lỗi biên dịch"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q070",
+    "chapter": 5,
+    "questionNumber": 70,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\npublic class Test\n{\n    public void DoNothing(Object ob)\n    {\n        Console.WriteLine(\"Object\");\n    }\n    public void DoNothing(int i)\n    {\n        Console.WriteLine(\"Integer\");\n    }\n    public void DoNothing(double i)\n    {\n        Console.WriteLine(\"Integer\");\n    }\n    public static void Main(String[] args)\n    {\n        Test test = new Test();\n        test.DoNothing(test);\n    }\n}",
+    "options": {
+      "A": "Integer",
+      "B": "Double",
+      "C": "Object",
+      "D": "Cả 3 đáp án đều sai"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q071",
+    "chapter": 5,
+    "questionNumber": 71,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, Lựa chọn nào được viết ở dòng //variable name here, khi biên dịch sẽ không có lỗi?\npublic class Test\n{\n    private int i = 1;\n    int j = 2;\n    public void TestMethod()\n    {\n    }\n    class TestInner\n    {\n        int k = 3;\n        public void InnerMethod(int m)\n        {\n            Console.WriteLine(//variable name here);\n        }\n    }\n}",
+    "options": {
+      "A": "i",
+      "B": "i+m",
+      "C": "i+j",
+      "D": "k+m"
+    },
+    "correctAnswer": "D",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q072",
+    "chapter": 5,
+    "questionNumber": 72,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, Lựa chọn nào được viết ở dòng //access variable here khi biên dịch sẽ không có lỗi?\npublic class Test\n{\n    int x = 0;\n    static int y = 1;\n    public class InnerClass\n    {\n        int z = 2;\n        public void GetValue()\n        {\n            //access variable here\n        }\n    }\n}",
+    "options": {
+      "A": "y = z = 6;",
+      "B": "y = 8;",
+      "C": "z = 9;",
+      "D": "Cả 3 đáp án đều đúng"
+    },
+    "correctAnswer": "D",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q073",
+    "chapter": 5,
+    "questionNumber": 73,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\npublic class Test\n{\n    public void TestMethod()\n    {\n        int a = 0;\n        class TestInner\n        {\n            public void InnerMethod(int x, int y)\n            {\n                Console.WriteLine(y);\n            }\n        }\n        TestInner inner = new TestInner();\n        inner.InnerMethod(1, 2);\n    }\n    public static void Main(String[] args)\n    {\n        Test main = new Test();\n        main.TestMethod();\n    }\n}",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "2",
+      "D": "Lỗi biên dịch"
+    },
+    "correctAnswer": "D",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q074",
+    "chapter": 5,
+    "questionNumber": 74,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\npublic class Test\n{\n     public void Method1()\n     {\n     }\n     class TestInner\n     {\n         public int x = 68;\n     }\n     public void Method2()\n     {\n         TestInner inner = new TestInner();\n         Console.WriteLine(inner.x);\n     }\n     public static void Main(String[] args)\n     {\n         Test test = new Test();\n         test.Method2();\n     }\n}",
+    "options": {
+      "A": "68",
+      "B": "Lỗi biên dịch",
+      "C": "Lỗi thực thi",
+      "D": "Cả 3 đáp án đều sai"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q075",
+    "chapter": 5,
+    "questionNumber": 75,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\npublic class Test\n{\n     public class TestInner\n     {\n         public void Print()\n         {\n             Console.WriteLine(\"Hi\");\n         }\n     }\n     public void Print()\n     {\n         Console.WriteLine(\"Hello\");\n     }\n     public static void Main(String[] args)\n     {\n         TestInner testInner = new TestInner();\n         testInner.Print();\n     }\n}",
+    "options": {
+      "A": "Hello",
+      "B": "Hi",
+      "C": "Lỗi biên dịch",
+      "D": "Lỗi thực thi"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q076",
+    "chapter": 5,
+    "questionNumber": 76,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nabstract class A\n{\n     public int i;\n     public abstract void display();\n}\nclass B : A\n{\n     public int j;\n     public int sum;\n     public override void display()\n     {\n         sum = i + j;\n         Console.WriteLine(+i + \",\" + +j + sum);                \n     }\n}\nclass Program\n{\n    static void Main(string[] args)\n    {\n        A obj = new B();\n        obj.i = 2;\n        B obj1 = new B();\n        obj1.j = 10;\n        obj.display();\n        Console.ReadLine();\n    }\n}",
+    "options": {
+      "A": "2,1012",
+      "B": "0,1010",
+      "C": "2,02",
+      "D": "0,00"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q077",
+    "chapter": 5,
+    "questionNumber": 77,
+    "question": "Trong khái niệm Kế thừa(C#), thành viên nào sau đây của lớp kế thừa có thể truy cập được các thành viên của lớp cơ sở?",
+    "options": {
+      "A": "static",
+      "B": "protected",
+      "C": "private",
+      "D": "Cả 3 đáp án đều sai"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q078",
+    "chapter": 5,
+    "questionNumber": 78,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, Chọn câu lệnh sẽ được thêm vào đoạn code /* add code here */ để có kết quả là 10 20 ?\nclass BaseClass\n{\n    protected int a = 20;\n}\nclass DerivedClass : BaseClass\n{\n    int a = 10;\n    public void Math()\n    {\n       /* add code here */\n    }\n}\nclass Program\n{\n    static void Main(string[] args)\n    {\n        DerivedClass obj = new DerivedClass();\n        obj.Math();\n    }\n}",
+    "options": {
+      "A": "Console.WriteLine( a + \", \" + this.a);",
+      "B": "Console.WriteLine(base.a + \", \" +this.a);",
+      "C": "Console.WriteLine(a + \",\" + base.a);",
+      "D": "Console.WriteLine(base.a + \",\" + base.a);"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q079",
+    "chapter": 5,
+    "questionNumber": 79,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\ninterface Calc\n{\n    void Cal(int i);\n}\nclass DisplayA : Calc\n{\n    public int x;\n    public void Cal(int i)\n    {\n        x = i * i;\n    }\n}\nclass DisplayB : Calc\n{\n    public int x;\n    public void Cal(int i)\n    {\n        x = i / i;\n    }\n}\nclass Program\n{\n    public static void Main(string[] args)\n    {\n        DisplayA arr1 = new DisplayA();\n        DisplayB arr2 = new DisplayB();\n        arr1.x = 0;\n        arr2.x = 0;\n        arr1.Cal(2);\n        arr2.Cal(2);\n        Console.WriteLine(arr1.x + \" \" + arr2.x);\n        Console.ReadLine();\n    }\n}",
+    "options": {
+      "A": "0 0",
+      "B": "2 2",
+      "C": "4 1",
+      "D": "1 4"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH5-Q080",
+    "chapter": 5,
+    "questionNumber": 80,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, khi biên dịch và thực thi chương trình, có kết quả là gì? \nclass Maths\n{\n    public int x;\n    public double y;\n    public int Add(int a, int b)\n    {\n        x = a + b;\n        return x;\n    }\n    public int Add(double c, double d)\n    {\n        y = c + d;\n        return (int)y;\n    }\n    public Maths()\n    {\n        this.x = 0;\n        this.y = 0;\n    }\n}\nclass Program\n{\n     public static void Main(string[] args)\n     {\n         Maths obj = new Maths();\n         int a = 4;\n         double b = 3.5;\n         obj.Add(a, a);\n         obj.Add(b, b);\n         Console.WriteLine(obj.x + \" \" + obj.y);\n         Console.ReadLine();\n     }\n}",
+    "options": {
+      "A": "4, 3.5",
+      "B": "8, 0",
+      "C": "7.5, 8",
+      "D": "8, 7"
+    },
+    "correctAnswer": "D",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  }
+]

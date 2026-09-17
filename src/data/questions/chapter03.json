@@ -1,0 +1,1282 @@
+[
+  {
+    "id": "CH3-Q001",
+    "chapter": 3,
+    "questionNumber": 1,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass A{\npublic:\n    A(){\n        cout << \"Constructor \";\n    }\n    ~A(){\n        cout << \"Destructor \";\n    }\n};\nint main(){\n    A *a = new A[2];\n    delete a;\n    return 0;\n}",
+    "options": {
+      "A": "Constructor",
+      "B": "Destructor",
+      "C": "Constructor Constructor Destructor",
+      "D": "Destructor  Destructor Constructor"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q002",
+    "chapter": 3,
+    "questionNumber": 2,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass A{\npublic:\n    A(){\n        cout << \"Constructor \";\n    }\n    ~A(){\n        cout << \"Destructor \";\n    }\n};\nint main()\n{\n    A *a = new A[2];\n    delete []a;\n    return 0;\n}",
+    "options": {
+      "A": "Constructor",
+      "B": "Destructor",
+      "C": "Constructor Constructor Destructor Destructor",
+      "D": "Destructor  Destructor Constructor"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q003",
+    "chapter": 3,
+    "questionNumber": 3,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass Geeks {\npublic:\n    string geekname;\n    void printName() {\n        cout << \"Geekname is:\" << geekname;\n    }\n};\nint main() {\n    Geeks* obj = new Geeks();\n    obj->geekname = \"Abhi\";\n    obj->printName();\n    return 0;\n}",
+    "options": {
+      "A": "Geekname is:Abhi",
+      "B": "Geekname is:",
+      "C": "Abhi",
+      "D": "Lỗi biên dịch"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q004",
+    "chapter": 3,
+    "questionNumber": 4,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass Parent {\nprotected:\n    int id_protected;\n};\nclass Child : public Parent {\npublic:\n    void setId(int id) {\n        id_protected = id;\n    }\n    void displayId() {\n        cout << \"ID Protected is: \" << id_protected << endl;\n    }\n};\nint main() {\n    Child obj1;\n    obj1.setId(68);\n    obj1.displayId();\n    return 0;\n}",
+    "options": {
+      "A": "68",
+      "B": "ID Protected is:68",
+      "C": "ID Protected is:0",
+      "D": "Lỗi biên dịch"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q005",
+    "chapter": 3,
+    "questionNumber": 5,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass Parent{\nprotected:\n    int id_protected = 0;\n};\nclass Child : public Parent{\npublic:\n    void setId(int id){\n        id_protected = id;\n    }\n    void displayId(){\n        cout << \"ID Protected is: \" << id_protected << endl;\n    }\n};\nint main() {\n    Child obj;  \n    obj.displayId();\n    return 0;\n}",
+    "options": {
+      "A": "68",
+      "B": "ID Protected is:68",
+      "C": "ID Protected is:0",
+      "D": "Lỗi biên dịch"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q006",
+    "chapter": 3,
+    "questionNumber": 6,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, lựa chọn nào được viết ở dòng //access variable here, khi biên dịch chương trình sẽ không có lỗi?\nclass A {\n    int a;\n    int b;\npublic:\n    float f1;\n    float f2;\n};\nclass B : public A {\npublic:\n    void displayId(){\n        //access variable here\n    }\n};\nint main() {\n    B obj;  \n    obj.displayId();\n    return 0;\n}",
+    "options": {
+      "A": "f1= 6; f2 = 8;",
+      "B": "a = 6;",
+      "C": "a = 6; b = 8;",
+      "D": "a = 6; b = 8; f1= 6; f2 = 8;"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q007",
+    "chapter": 3,
+    "questionNumber": 7,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, lựa chọn nào được viết ở dòng //access variable here, khi biên dịch chương trình sẽ không có lỗi?\nclass A{\nprivate:\n    int a;\nprotected:\n    int b;\npublic:\n    float f1;\n    float f2;\n};\nclass B : protected A {\npublic:\n    void displayId(){\n        //access variable here\n    }\n};\nint main() {\n    B obj;  \n    obj.displayId();\n    return 0;\n}",
+    "options": {
+      "A": "a= 6; f2 = 8;",
+      "B": "a = 6;",
+      "C": "a = 6; b = 8;",
+      "D": "b = 8; f1= 6; f2 = 8;"
+    },
+    "correctAnswer": "D",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q008",
+    "chapter": 3,
+    "questionNumber": 8,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, lựa chọn nào được viết ở dòng //access variable here, khi biên dịch chương trình sẽ không có lỗi?\nclass A\n{\n    int a;\n    int b;\n    float f1;\n    float f2;\n};\nclass B :public A\n{\npublic:\n    void displayId() {\n        //access variable here\n    }\n};\nint main() {\n    B obj;\n    obj.displayId();\n    return 0;\n}",
+    "options": {
+      "A": "a= 6; f2 = 8;",
+      "B": "a = 6;",
+      "C": "a = 6; b = 8;",
+      "D": "Cả 3 đáp án đều sai"
+    },
+    "correctAnswer": "D",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q009",
+    "chapter": 3,
+    "questionNumber": 9,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, lựa chọn nào được viết ở dòng //access variable here, khi biên dịch chương trình sẽ không có lỗi?\nclass A\n{\n    char x, y;\nprivate:\n    int a;\nprotected:\n    int b;\npublic:\n    float f1;\n    float f2;\n};\nclass B :public A\n{\npublic:\n    void displayId() {\n        //access variable here\n    }\n};\nint main() {\n    B obj;\n    obj.displayId();\n    return 0;\n}",
+    "options": {
+      "A": "a= 6; f2 = 8;x = 7; y = 9",
+      "B": "a = 6; x = 7; y = 9",
+      "C": "a = 6; b = 8;",
+      "D": "b = 8; f1= 6; f2 = 8;"
+    },
+    "correctAnswer": "D",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q010",
+    "chapter": 3,
+    "questionNumber": 10,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch chương trình, lỗi ở dòng nào:\n1   class RectangleInt\n2   {\n3   private:\n4       int a = 7;\n5       int b = 9;\n6       friend void output();\n7   };\n8   class RectangleFloat\n9   {   \n10  private:\n11      float x = 6; \n12      float y = 8;\n13      friend void output();\n14  };\n15  void output()\n16  {\n17      RectangleInt obj1;\n18      RectangleFloat obj2;\n19      cout << obj1.a; \n20      cout << obj2.x;\n21  }\n22  int main() {\n23      output();\n24      return 0;\n25  }",
+    "options": {
+      "A": "Không dòng nào có lỗi",
+      "B": "Lỗi tại dòng 15",
+      "C": "Lỗi tại dòng 13",
+      "D": "Lỗi tại dòng 16, 17"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q011",
+    "chapter": 3,
+    "questionNumber": 11,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, lựa chọn nào được viết ở dòng //access variable here, khi biên dịch chương trình sẽ không có lỗi?\nclass RectangleInt {\nprivate:\n    int a;\n    int b;\npublic:\n    float x;\n    float y;\n    friend class RectangleFloat;\n};\nclass RectangleFloat {\n    RectangleInt rectInt;\npublic:\n    void displayId(){       \n        //access variable here\n    }\n};\nint main() {\n    RectangleFloat obj;\n    obj.displayId();\n    return 0;\n}",
+    "options": {
+      "A": "rectInt.a = 5; rectInt.b = 5;",
+      "B": "rectInt.x = 5; rectInt.y = 5;",
+      "C": "rectInt.a = 5; rectInt.b = 5; rectInt.x = 5; rectInt.y = 5;",
+      "D": "Cả 3 đáp án đều sai"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q012",
+    "chapter": 3,
+    "questionNumber": 12,
+    "question": "Cho chương trình viết bằng ngôn ngữ Java như sau, lựa chọn nào được viết ở dòng //your code here, khi biên dịch chương trình sẽ không có lỗi?\nclass RectangleInt {\npublic:\n    int a = 0;\npublic:\n    int b = 0;\n    void input(){\n        cout<<\"\\n a = \"; \n        cout<<\"\\n b =\"; \n    }\n};\nclass RectangleFloat : public RectangleInt{\n    RectangleInt *p;\npublic:\n    void displayId(){       \n        //your code here\n    }\n};\nint main() {\n    RectangleFloat obj;\n    obj.displayId();\n    return 0;\n}",
+    "options": {
+      "A": "p.nhap();",
+      "B": "p(nhap();",
+      "C": "this.nhap( ); RectangleInt::nhap();",
+      "D": "Cả 3 đáp án đều sai"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q013",
+    "chapter": 3,
+    "questionNumber": 13,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\n1   class RectangleInt\n2   {\n3   private:\n4       int a = 7;\n5       int b = 9;\n6       friend void output();\n7   };\n8   class RectangleFloat\n9   {   \n10  private:\n11      float x = 6; \n12      float y = 8;\n13      friend void output();\n14  };\n15  void output()\n16  {\n17      RectangleInt obj1;\n18      RectangleFloat obj2;\n19      cout << obj1.a; \n20      cout << obj2.x;\n21  }\n22  int main() {\n23      output();\n24      return 0;\n25  }",
+    "options": {
+      "A": "6",
+      "B": "8",
+      "C": "76",
+      "D": "Lỗi biên dịch"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q014",
+    "chapter": 3,
+    "questionNumber": 14,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, lựa chọn nào được viết ở dòng //you code here, sử dụng truy xuất phương thức display()?\nclass RectangleA\n{\n    int a = 6;\npublic:\n    void display() {\n        cout << a;\n    }\n};\nint main() {\n    RectangleA rectA;\n    //you code here\n    return 0;\n}",
+    "options": {
+      "A": "rectA.display();",
+      "B": "*rectA.display();",
+      "C": "rectA(display();",
+      "D": "RectangleA::display();"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q015",
+    "chapter": 3,
+    "questionNumber": 15,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, phương thức ~Rectangle(){} được gọi là?\nclass Rectangle\n{\nprivate:\n    int w;\n    int h;\npublic:\n    Rectangle(int w = 0, int h = 0){}\n    void output(){}\n    ~Rectangle(){}\n};",
+    "options": {
+      "A": "Phương thức khởi tạo (Constructor)",
+      "B": "Phương thức huỷ (Destructor)",
+      "C": "Phương thức bạn (friend)",
+      "D": "Phương thức ảo (Virtual)"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q016",
+    "chapter": 3,
+    "questionNumber": 16,
+    "question": "Cho chương trình viết bằng ngôn ngữ C# như sau, phương thức Rectangle(){} được gọi là?\npublic class Rectangle\n{\n    private int w;\n    private int h;\n    public Rectangle(){}\n    public Rectangle(int w, int h){}\n    void Output(){} \n}",
+    "options": {
+      "A": "Phương thức khởi tạo (Constructor)",
+      "B": "Phương thức huỷ (Destructor)",
+      "C": "Phương thức bạn (friend)",
+      "D": "Phương thức ảo (Virtual)"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q017",
+    "chapter": 3,
+    "questionNumber": 17,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nconst double PI = 3.14159;\nclass Circle {\nprivate: double radius;\npublic:\n   Circle(double rad) : radius(rad) {}\n   double calculateArea() {\n      return PI * pow(radius, 2);\n   }\n   double calculateCircumference() {\n      return 2 * PI * radius;\n   }\n};\nint main() {\n   Circle circle(6);\n   double area = circle.calculateArea();\n   cout << \"Area: \" << area;\n   double circumference = circle.calculateCircumference();\n   cout << \" Circumference: \" << circumference;\n   return 0;\n}",
+    "options": {
+      "A": "Area: 2",
+      "B": "Area: 3.14159",
+      "C": "Circumference: 3.14159",
+      "D": "Area: 113.097 Circumference: 37.6991"
+    },
+    "correctAnswer": "D",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q018",
+    "chapter": 3,
+    "questionNumber": 18,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass Rectangle\n{\nprivate:\n    double length;\n    double width;\npublic:\n    Rectangle(double len, double wid) : length(len), width(wid) {}\n    double calculateArea()\n    {\n        return length * width;\n    }\n    double calculatePerimeter()\n    {\n        return 2 * (length + width);\n    }\n};\nint main()\n{\n    Rectangle rectangle(4.5, 6.0);\n    double area = rectangle.calculateArea();\n    cout << \"Area: \" << area;\n    double perimeter = rectangle.calculatePerimeter();\n    cout << \" Perimeter: \" << perimeter;\n    return 0;\n}",
+    "options": {
+      "A": "Perimeter: 27",
+      "B": "Perimeter: 21",
+      "C": "Area: 27 Perimeter: 21",
+      "D": "Area: 27"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q019",
+    "chapter": 3,
+    "questionNumber": 19,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass Person {\nprivate: string name;\n   int age;\n   string country;\npublic:\n   void setName(const string & n) {\n      name = n;\n   }\n   void setAge(int a) {\n      age = a;\n   }\n   void setCountry(const string & c) {\n      country = c;\n   }\n   string getName() {\n      return name;\n   }\n   int getAge() {\n      return age;\n   }\n   string getCountry() {\n      return country;\n   }\n};\nint main() {\n   Person person;\n   person.setName(\"Saveli Sujatha\");\n   person.setAge(25);\n   person.setCountry(\"USA\");\n   cout << \"Name: \" << person.getName();\n   cout << \", Age: \" << person.getAge() ;\n   cout << \", Country: \" << person.getCountry();\n   return 0;\n}",
+    "options": {
+      "A": "Name: Saveli Sujatha",
+      "B": "Name: Saveli Sujatha, Age: 25",
+      "C": "Name: Saveli Sujatha, Country: USA, Age: 25",
+      "D": "Name: Saveli Sujatha, Age: 25, Country: USA"
+    },
+    "correctAnswer": "D",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q020",
+    "chapter": 3,
+    "questionNumber": 20,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass Car\n{\nprivate:\n    string company;\n    string model;\n    int year;\npublic:\n    Car(const string &comp,\n        const string &mdl, int yr) : company(comp), model(mdl), year(yr) {}\n    string getCompany()\n    {\n        return company;\n    }\n    string getModel()\n    {\n        return model;\n    }\n    int getYear()\n    {\n        return year;\n    }\n    void setCompany(const string &comp)\n    {\n        company = comp;\n    }\n    void setModel(const string &mdl)\n    {\n        model = mdl;\n    }\n    void setYear(int yr)\n    {\n        year = yr;\n    }\n};\nint main()\n{\n    Car car(\"AUDI\", \"A6\", 2023);\n    cout << \"Company: \" << car.getCompany();\n    cout << \", Model: \" << car.getModel();\n    cout << \", Year: \" << car.getYear();\n    return 0;\n}",
+    "options": {
+      "A": "Model: A6, Year: 2023, Company: AUDI",
+      "B": "Company: AUDI, Year: 2023, Model: A6",
+      "C": "Company: AUDI, Model: A6, Year: 2023",
+      "D": "Year: 2023, Company: AUDI, Model: A6,"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q021",
+    "chapter": 3,
+    "questionNumber": 21,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass BankAccount {\nprivate: \n   string accNumber;\n   double balance;\npublic:\n   BankAccount(const string &accNum, double ib):accNumber(accNum),balance(ib) {}\n   void deposit(double amount) {\n      balance += amount;\n      cout << \", Deposit successful: \" << balance ;\n   }\n};\nint main() {\n   double deposit_amt;\n   BankAccount account(\"SB-123\", 1000.0);\n   deposit_amt = 1500;\n   cout<<\"Amount: \"<<deposit_amt << \". \";\n   account.deposit(deposit_amt);\n   return 0;\n}",
+    "options": {
+      "A": "Amount: 1500",
+      "B": "Deposit successful: 2500",
+      "C": "Amount: 1000, Deposit successful: 1500",
+      "D": "Amount: 1500, Deposit successful: 2500"
+    },
+    "correctAnswer": "D",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q022",
+    "chapter": 3,
+    "questionNumber": 22,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass Triangle {\nprivate: double side1;\n   double side2;\n   double side3;\npublic:\n   Triangle(double s1, double s2, double s3) : side1(s1),   side2(s2), side3(s3) {}\n   void determineType() {\n      if (side1 == side2 && side2 == side3) {\n         cout << \"Equilateral Triangle\";\n      }\n      else if (side1 == side2 || side1 == side3 || side2 == side3) {\n         cout << \"Isosceles Triangle\" ;\n      }\n      else {\n         cout << \"Scalene Triangle\" ;\n      }\n   }\n};\nint main() {\n   Triangle triangle(3, 4, 5);\n   triangle.determineType();\n   return 0;\n}",
+    "options": {
+      "A": "Scalene Triangle",
+      "B": "Equilateral Triangle",
+      "C": "Isosceles Triangle",
+      "D": "Lỗi biên dịch"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q023",
+    "chapter": 3,
+    "questionNumber": 23,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass Triangle\n{\nprivate:\n    double side1;\n    double side2;\n    double side3;\npublic:\n    Triangle(double s1, double s2, double s3) : side1(s1), side2(s2), side3(s3) {}\n    void determineType()\n    {\n        if (side1 == side2 && side2 == side3)\n        {\n            cout << \"Equilateral Triangle\";\n        }\n        else if (side1 == side2 || side1 == side3 || side2 == side3)\n        {\n            cout << \"Isosceles Triangle\";\n        }\n        else\n        {\n            cout << \"Scalene Triangle\";\n        }\n    }\n};\nint main()\n{\n    Triangle triangle(7, 7, 7);\n    triangle.determineType();\n    return 0;\n}",
+    "options": {
+      "A": "Scalene Triangle",
+      "B": "Equilateral Triangle",
+      "C": "Isosceles Triangle",
+      "D": "Lỗi biên dịch"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q024",
+    "chapter": 3,
+    "questionNumber": 24,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch chương trình, lỗi tại dòng nào?\nclass A {\n   int x, y;\npublic:\n   void output(){};\n   void input(){};\n};\nclass B : public A {\nprivate: \n   float z;\n};\nvoid main()\n{\n   A a; \n   B b;\n   a = b;\n   b = a;   \n}",
+    "options": {
+      "A": "class B : public A",
+      "B": "a=b",
+      "C": "b=a;",
+      "D": "A a;"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q025",
+    "chapter": 3,
+    "questionNumber": 25,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass A{\n   float x;\npublic:\n    A(){\n      x = 1.5;\n   }\n   void output(){\n      cout << x;\n   }\n};\nclass B : public A {\n   float y;\npublic:\n   B():A(){\n      y = 2.5;\n   }\n   void output(){\n      A::A();\n      cout << y;\n   }\n};\nvoid main()\n{\n   B * dt2 = new B;\n   dt2->output();\n}",
+    "options": {
+      "A": "1.5",
+      "B": "2.5",
+      "C": "1.5 2.5",
+      "D": "Các đáp án đều sai"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q026",
+    "chapter": 3,
+    "questionNumber": 26,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass A\n{\n    int a, b;\npublic:\n    A()\n    {\n        a = 5;\n        b = 10;\n    }\n    static void output()\n    {\n        cout << \"a = \" << a << \" b = \" << b:\n    }\n};\nstatic A::b = 15;\nvoid main()\n{\n    A a;\n    a.output();\n}",
+    "options": {
+      "A": "a=5;b=0;",
+      "B": "Chương trình có lỗi, không thể hiển thị kết quả (vì lỗi dòng static A::b = 15;)",
+      "C": "a=5;b=15;",
+      "D": "a=5;b=10;"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q027",
+    "chapter": 3,
+    "questionNumber": 27,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình trên môi trường có kích thước số nguyên là 4 byte, kết quả là gì?\nclass BaseClass\n{\n    int arr[10];\n};\nclass A : public BaseClass\n{\n};\nclass B : public BaseClass\n{\n};\nclass Derived : public A, public B\n{\n};\nint main(void)\n{\n    cout << sizeof(Derived);\n    return 0;\n}",
+    "options": {
+      "A": "40",
+      "B": "80",
+      "C": "20",
+      "D": "400"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q028",
+    "chapter": 3,
+    "questionNumber": 28,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, chương trình lỗi ở dòng nào?\nclass A {\n    int a;\n    public:\n    A(int k){\n        a=k; //Dòng 1\n    }\n};\nvoid main(){\n    int n=2;\n    A *a =new A(10); //Dòng 2\n    A *b=new A [n]; //Dòng 3\n}",
+    "options": {
+      "A": "Dòng 1",
+      "B": "Dòng 2",
+      "C": "Dòng 3",
+      "D": "Cả ba dòng đều lỗi"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q029",
+    "chapter": 3,
+    "questionNumber": 29,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass A {\n   int a;\npublic:\n   A(){\n      a = 5;\n   }\n   A(int k){\n      a = k;\n   }\n   void output(){\n      cout << \"a = \" << a;\n   }\n};\nvoid main(){\n   A a[3] = { A(10), A(20) };\n   a[2].output();\n}",
+    "options": {
+      "A": "a=10;",
+      "B": "a=5;",
+      "C": "a=20;",
+      "D": "Lỗi biên dịch"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q030",
+    "chapter": 3,
+    "questionNumber": 30,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass A {\npublic:\n   static int n;\n};\nint A::n = 10;\nvoid main() {\n   A a;\n   cout << ++a.n; \n}",
+    "options": {
+      "A": "10",
+      "B": "11",
+      "C": "12",
+      "D": "Lỗi biên dịch"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q031",
+    "chapter": 3,
+    "questionNumber": 31,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass A{\nprotected:\n   int a, b;\npublic:\n   void output(){\n      cout<<\"a = \"<<a<<\" b = \"<<b;\n   }\n   A(){\n      a = b= 10;\n   }\n   A(int k1, int k2 = 8){\n      a = k1; b = k2;\n   }\n};\nint main(){\n   A a(5);\n   A b(a);\n   b.output(); \n}",
+    "options": {
+      "A": "a=10; b=8;",
+      "B": "a=10; b=5;",
+      "C": "a=10; b=10;",
+      "D": "a=5; b=8;"
+    },
+    "correctAnswer": "D",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q032",
+    "chapter": 3,
+    "questionNumber": 32,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass Base {\npublic:\n   Base(){\n      cout << \"Constructing Base \";\n   }\n   ~Base(){\n      cout << \"Destructing Base \";\n   }\n};\nclass Derived : public Base {\npublic:\n   Derived(){\n      cout << \"Constructing Derived \";\n   }\n   ~Derived(){\n      cout << \"Destructing Derived \";\n   }\n};\nint main(void){\n   Derived *d = new Derived();\n   Base *b = d;\n   delete b;\n   return 0;\n}",
+    "options": {
+      "A": "Constructing Base",
+      "B": "Constructing Derived",
+      "C": "Constructing Base Destructing Base",
+      "D": "Constructing Base Constructing Derived Destructing Base"
+    },
+    "correctAnswer": "D",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q033",
+    "chapter": 3,
+    "questionNumber": 33,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass ABC\n{\npublic:\n    int a, b;\n    void nhap()\n    {\n        a = 10;\n        b = 10;\n    }\n};\nvoid main()\n{\n    ABC *obj = new ABC();\n    obj->a = 3;\n    obj->b = 5;\n    cout << obj->a;\n}",
+    "options": {
+      "A": "10",
+      "B": "5",
+      "C": "3",
+      "D": "Lỗi biên dịch"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q034",
+    "chapter": 3,
+    "questionNumber": 34,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass Base {\nprivate:\n    int a, b;\n};\nclass Derived {\npublic:\n    Base obj1;\n    void setValues() {\n        obj1.a = 12;\n        obj1.b = 8;\n    }\n    void printValues() {\n        cout << obj1.a + obj1.a;\n    }\n};\nvoid main() {\n    Derived obj;\n    obj.setValues();\n    obj.printValues();\n}",
+    "options": {
+      "A": "8",
+      "B": "12",
+      "C": "24",
+      "D": "Lỗi biên dịch do biến a, b của lớp Base là private"
+    },
+    "correctAnswer": "D",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q035",
+    "chapter": 3,
+    "questionNumber": 35,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass Base {\npublic:\n   int a, b;\n};\nclass Derived {\npublic:\n   Base obj1;\n   void setValues() {\n      obj1.a = 12;\n      obj1.b = 8;\n   }\n   void printValues() {\n      cout << obj1.a + obj1.a;\n   }\n};\nvoid main() {\n   Derived obj;\n   obj.setValues();\n   obj.printValues();\n}",
+    "options": {
+      "A": "8",
+      "B": "12",
+      "C": "24",
+      "D": "Lỗi biên dịch do biến a, b của lớp Base là public"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q036",
+    "chapter": 3,
+    "questionNumber": 36,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass Derived {\npublic:\n   int a, b;\npublic:  \n   void setValues(int  a, int  b) {\n      this->a = a; this->b = b;\n   }  \n   void printValues() {\n      cout << a + b;\n   }\n};\nvoid main() {\n   Derived obj;\n   obj.setValues(6,8);\n   obj.printValues();\n}",
+    "options": {
+      "A": "8",
+      "B": "6",
+      "C": "14",
+      "D": "Lỗi biên dịch"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q037",
+    "chapter": 3,
+    "questionNumber": 37,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass BankAccount {\nprivate:\n    string accountNumber;\n    double balance;\npublic:\n    BankAccount(string accNum, double initBalance) : accountNumber(accNum), balance(initBalance) {}\n    void deposit(double amount) {\n        if (amount > 0) {\n            balance += amount;\n        }\n    }\n    void withdraw(double amount) {\n        if (amount > 0 && balance >= amount) {\n            balance -= amount;\n        }\n    }\n    double getBalance() {\n        return balance;\n    }\n};\nint main() {\n    BankAccount myAccount(\"12345\", 1000);\n    cout << \" Initial:\" << myAccount.getBalance() ;\n    myAccount.deposit(500);\n    cout << \" Deposit:\" << myAccount.getBalance() ;\n    myAccount.withdraw(300);\n    cout << \" Withdrawal:\" << myAccount.getBalance() ;\n    return 0;\n}",
+    "options": {
+      "A": "Initial:1000",
+      "B": "Deposit:1500",
+      "C": "Withdrawal:1200",
+      "D": "Initial:1000 Deposit:1500 Withdrawal:1200"
+    },
+    "correctAnswer": "D",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q038",
+    "chapter": 3,
+    "questionNumber": 38,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass Quiz {\npublic:\n    static void start(int s) {\n        correctAnswers = s;\n    }\n    static void startScore() {\n        score = correctAnswers * correctAnswers;\n    }\n    static void outResult() {\n        cout << \"Score:\" << score;\n    }\nprivate:    \n    static const string questions;\n    static int correctAnswers;\n    static int score;\n};\nconst string Quiz::questions = \"What is the Constructor?\";\nint Quiz::correctAnswers= 3;\nint Quiz::score = 0;\nint main() {    \n    Quiz::start(5);\n    Quiz::startScore();\n    Quiz::outResult();\n    return 0;\n}",
+    "options": {
+      "A": "Score: 3",
+      "B": "Score: 5",
+      "C": "Score: 25",
+      "D": "Lỗi biên dịch"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q039",
+    "chapter": 3,
+    "questionNumber": 39,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass A\n{\nprivate:\n   int x = 6;\n};\nclass B : protected A\n{\n   int y = 8;\n   output(){cout<<x+y;}\n};\nvoid main()\n{\n   A test;\n}",
+    "options": {
+      "A": "Lỗi biên dịch",
+      "B": "6",
+      "C": "8",
+      "D": "14"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q040",
+    "chapter": 3,
+    "questionNumber": 40,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\n01: class A\n02: {\n03: private:\n04:   int a;\n05:   int b;\n06:   friend  void Nhap();\n07: };\n08: class B\n09: {\n10: public:\n11:   float x;\n12:   float y;\n13:   friend void Nhap();\n14: };\n15: void nhap()\n16: {\n17:   A obj1;\n18:      B obj2;\n19:   cout << \"Nhap a = \"; cin >> obj1.a;\n20:   cout << \"\\nNhap x = \"; cin >> obj2.x;\n21: }",
+    "options": {
+      "A": "Lỗi tại dòng 19",
+      "B": "Không lỗi ở dòng nào",
+      "C": "Lỗi tại dòng 20",
+      "D": "Lỗi tại dòng 19 và 20"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q041",
+    "chapter": 3,
+    "questionNumber": 41,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\n1.  class Lop1\n2.  {\n3.  private:    \n4.          int a,b;\n5.          friend void Nhap( );\n6.  };\n7.  class Lop2\n8.  {\n9.  private:\n10.          float x,y;\n11.          friend void Nhap( );\n12. };\n13. void Nhap( )\n14. {\n15.      Lop1  obj1; Lop2 obj2;\n16.      cout<<\"\\n\\t Nhap a =\"; cin>>obj1.a;\n17.      cout<<\"\\n\\t Nhap x =\"; cin>>obj2.x;\n18. }",
+    "options": {
+      "A": "Không lỗi ở dòng nào",
+      "B": "Lỗi tại dòng 16, 17",
+      "C": "Lỗi tại dòng 15",
+      "D": "Lỗi tại dòng 13"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q042",
+    "chapter": 3,
+    "questionNumber": 42,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass Lop1\n{\n   private:\n      int   a,b;\n   public:\n      float x,y;\n      friend class Lop2;\n};\nclass Lop2\n{\n   Lop1  objA;\n};\nclass Lop3\n{\n   Lop1  objB;\n};",
+    "options": {
+      "A": "objA truy cập được tất cả các biến, objB truy cập được các biến x,y",
+      "B": "objA và objB truy cập được tất cả các biến",
+      "C": "objA và objB chỉ truy cập được các biến x,y",
+      "D": "objA truy cập được tất cả các biến, objB truy cập được các biến a,b"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q043",
+    "chapter": 3,
+    "questionNumber": 43,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass Lop1\n{\nprotected:\n    int a, b;\npublic:\n    void setvalue()\n    {\n        a = b = 10;\n    }\n};\nclass Lop2 : public Lop1\n{\n    int x, y;\npublic:\n    void setvalue()\n    {\n        x = y = 4;\n    }\n};\nNếu tạo ra đối tượng của Lop2 là obj2 và thực hiện lệnh gọi hàm như sau: obj.setvalue( ); thì hàm setvalue của lớp nào sẽ được gọi:",
+    "options": {
+      "A": "Lop2",
+      "B": "Lop1",
+      "C": "Cả 2 lớp",
+      "D": "Không gọi được hàm nào vì trùng tên hàm"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q044",
+    "chapter": 3,
+    "questionNumber": 44,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass Lop1\n{\nprotected:\n    int a, b;\npublic:\n    void setvalue()\n    {\n        a = b = 10;\n    }\n};\nclass Lop2 : public Lop1\n{\n    int x, y;\npublic:\n    void setvalue()\n    {\n        x = y = 4;\n    }\n};\nTrong lớp Lop2 có thể truy cập được những biến nào:",
+    "options": {
+      "A": "Tất cả biến a, b, x, y",
+      "B": "Chỉ có biến x, y",
+      "C": "Không truy cập được biến nào",
+      "D": "Chỉ truy cập được biến a, b"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q045",
+    "chapter": 3,
+    "questionNumber": 45,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass ClassA{\n    int x;\npublic:\n    int getx();\n};\nvà một lớp kế thừa theo kiểu protected:\nclass ClassB : protected ClassA{\n    int y;\n};\nKhi đó, nếu myB là một đối tượng lớp ClassB, lệnh nào sau đúng:",
+    "options": {
+      "A": "myB.x();",
+      "B": "myB.getx;",
+      "C": "getx();",
+      "D": "Không có đáp án đúng"
+    },
+    "correctAnswer": "D",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q046",
+    "chapter": 3,
+    "questionNumber": 46,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass ClassA{\n    int x;\npublic:\n    int getx();\n};\nvà một lớp kế thừa theo kiểu public:\nclass ClassB : public ClassA{\n    int y;\n};\nKhi đó, nếu myA là một đối tượng lớp ClassA, lệnh nào sau đây đúng:",
+    "options": {
+      "A": "myA.getx();",
+      "B": "myA.x;",
+      "C": "myA.x()",
+      "D": "Không có đáp án đúng"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q047",
+    "chapter": 3,
+    "questionNumber": 47,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass A{\npublic:\n    void show(){ }\n};\nclass B : public A{\npublic:\n    void show() { }\n};\nKhi đó, nếu myB là một đối tượng lớp B, muốn thực hiện phương thức show() của lớp B thì lệnh nào sau đây là chấp chận được:",
+    "options": {
+      "A": "myB::show();",
+      "B": "show();",
+      "C": "myB.show();",
+      "D": "Không có đáp án đúng"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q048",
+    "chapter": 3,
+    "questionNumber": 48,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass A\n{\n    int a, b;\n    float F1, F2;\n};\nclass B :public A\n{\n    float d;\n};\nHỏi: B sử dụng được các biến thành viên nào của A",
+    "options": {
+      "A": "Không có đáp án đúng",
+      "B": "a,b",
+      "C": "F1,F2",
+      "D": "a,b,F1,F2"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q049",
+    "chapter": 3,
+    "questionNumber": 49,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass A\n{\nprotected:\n    int     a, b;\npublic:\n    float f1, f2;\n};\nclass B : private A\n{\n    int d;\n};\nHỏi: B sử dụng được các biến thành viên nào của A",
+    "options": {
+      "A": "f1, f2, a, b",
+      "B": "f1, f2",
+      "C": "a, b",
+      "D": "Không có đáp án đúng"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q050",
+    "chapter": 3,
+    "questionNumber": 50,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass A\n{\n    int a, b;\npublic:\n    float f1, f2;\n};\nclass B : private A\n{\npublic:\n    void nhap();\n};\nHỏi B sử dụng được các biến thành viên nào của A",
+    "options": {
+      "A": "f1, f2",
+      "B": "a, b",
+      "C": "a,b,f1,f2",
+      "D": "Không có đáp án đúng"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q051",
+    "chapter": 3,
+    "questionNumber": 51,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass A\n{\nprotected:\n    int     a, b;\npublic:\n    float f1, f2;\n};\nclass  B : private A\n{\n    float x;\n};",
+    "options": {
+      "A": "a, b, f1, f2",
+      "B": "f1, f2",
+      "C": "a, b",
+      "D": "Không có đáp án đúng"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q052",
+    "chapter": 3,
+    "questionNumber": 52,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass Base{\npublic:\n    int xVal;\n    Base(int x = 0) : xVal(x){\n        cout <<\"xVal = \"<<xVal;\n    }\n};\nclass Derive : Base\n{\npublic: \n    Derive(){ xVal = 10; }\n    void Print(){\n        cout <<\" xVal = \"<<xVal<<endl;\n    }\n};\nvoid main(){\n    Derive d;\n    d.Print();\n}",
+    "options": {
+      "A": "xVal = 0  xVal = 10",
+      "B": "Lỗi biên dịch",
+      "C": "xVal = 10",
+      "D": "xVal = 0"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q053",
+    "chapter": 3,
+    "questionNumber": 53,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass Base{\nprotected:\n    int xVal;\npublic:\n    Base(){ xVal = 5; }\n    void Print(){\n        cout << \"xVal = \" << xVal << endl;\n    }\n};\nclass Derive : protected Base\n{\npublic:\n    Derive(int x) { xVal = x; }\n};\nvoid main()\n{\n    Derive d(10);\n    d.Print();\n}",
+    "options": {
+      "A": "Lỗi biên dịch",
+      "B": "xVal = 5    xVal = 10",
+      "C": "xVal = 10",
+      "D": "xVal = 5"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q054",
+    "chapter": 3,
+    "questionNumber": 54,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass BaseA{\nprotected:\n    int A;\npublic:\n    BaseA(){ A = 5; }\n    void Print(){ cout << \"A = \" << A << endl; }\n};\nclass BaseB {\nprotected:\n    int B;\npublic:\n    BaseB(){ B = 10; }\n    void Print(){ cout << \"B = \" << B << endl; }\n};\nclass Derive :public BaseA, public BaseB {};\nvoid main(){\n    Derive d();\n    d.BaseA::Print();\n}",
+    "options": {
+      "A": "Lỗi biên dịch.",
+      "B": "A =\t5\tB =\t10",
+      "C": "B =\t10",
+      "D": "A =\t5"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q055",
+    "chapter": 3,
+    "questionNumber": 55,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\n0:template <class T> \n1:T max_number (T a, T b) {\n2:      if (a > b) return a;\n3:      return b;\n4:  }\n5:  float max_number (float fa, float fb) {\n6:    if (fa - fb >0) return fa;\n7:      return fb;\n8:  }\n9:  void main(){\n10:        \n11:     cout<< max_number (a,b);\n12: }\nKhi thêm lệnh nào vào dòng 10 thì chương trình báo lỗi:",
+    "options": {
+      "A": "char a = ‘A’, b = ‘B’ ;",
+      "B": "int a = 5; int b = 6 ;",
+      "C": "float a = 5.0, b = 6.0 ;",
+      "D": "float a = 5.0; int b = 6 ;"
+    },
+    "correctAnswer": "D",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q056",
+    "chapter": 3,
+    "questionNumber": 56,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, lệnh nào dưới đây thêm vào dòng 6 thì khi biên dịch chương trình không báo lỗi?\n1:    template <class T, class U>\n2:    void func (T a, U b){\n3:         cout<<a<<b ;\n4:    }\n5:    void main(){\n6:\n7:      func(a,b);\n8:    }",
+    "options": {
+      "A": "float a = 5.0, b = 6.0;",
+      "B": "char a = ‘A’ ; char *b = “Hello”;",
+      "C": "float a = 5.0; int b = 6;",
+      "D": "Các đáp án đều đúng"
+    },
+    "correctAnswer": "D",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q057",
+    "chapter": 3,
+    "questionNumber": 57,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\ntemplate <class T, int n>\nclass Table{\n    T data[n];\npublic:\n    Table() { }\n    T & operator[](int i){ return data[i]; }\n};\nvoid main(){\n    Table <int, 2>t;\n    t[0] = 0; t[1] = 1;\n    cout << t[0] << \" \" << t[1];\n}",
+    "options": {
+      "A": "0 1",
+      "B": "Một kết quả khác",
+      "C": "Lỗi thực thi",
+      "D": "Lỗi biên dịch"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q058",
+    "chapter": 3,
+    "questionNumber": 58,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass Parent\n{\npublic:\n    int id_p;\n};\nclass Child : public Parent\n{\npublic:\n    int id_c;\n};\nint main()\n{\n    Child obj1;\n    obj1.id_c = 6;\n    obj1.id_p = 8;\n    cout << obj1.id_c << \" and \" << obj1.id_p;\n    return 0;\n}",
+    "options": {
+      "A": "5 and 7",
+      "B": "6 and 8",
+      "C": "8 and 6",
+      "D": "Lỗi biên dịch"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q059",
+    "chapter": 3,
+    "questionNumber": 59,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass Shape\n{\npublic:\n    void setWidth(int w)\n    {\n        width = w;\n    }\n    void setHeight(int h)\n    {\n        height = h;\n    }\nprotected:\n    int width;\n    int height;\n};\nclass Rectangle : public Shape\n{\npublic:\n    int getArea()\n    {\n        return (width * height);\n    }\n};\nint main(void)\n{\n    Rectangle rect;\n    rect.setWidth(6);\n    rect.setHeight(8);  \n    cout <<rect.getArea() << endl;\n    return 0;\n}",
+    "options": {
+      "A": "6",
+      "B": "8",
+      "C": "48",
+      "D": "Lỗi biên dịch"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q060",
+    "chapter": 3,
+    "questionNumber": 60,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass Shape\n{\npublic:\n    void setWidth(int w)\n    {\n        width = w;\n    }\n    void setHeight(int h)\n    {\n        height = h;\n    }\nprotected:\n    int width;\n    int height;\n};\nclass PaintCost\n{\npublic:\n    int getCost(int area)\n    {\n        return area * 10;\n    }\n};\nclass Rectangle : public Shape, public PaintCost\n{\npublic:\n    int getArea()\n    {\n        return (width * height);\n    }\n};\nint main(void)\n{\n    Rectangle rect;\n    int area;\n    rect.setWidth(6);\n    rect.setHeight(8);\n    area = rect.getArea();  \n    cout << rect.getCost(area) << endl;\n    return 0;\n}",
+    "options": {
+      "A": "6",
+      "B": "480",
+      "C": "8",
+      "D": "48"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q061",
+    "chapter": 3,
+    "questionNumber": 61,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass Polygon {\nprotected:\n    int width, height;\npublic:\n    void setValues(int a, int b);\n};\nvoid Polygon::setValues(int a, int b){\n    width = a;\n    height = b;\n}\nclass Rectangle : public Polygon {\npublic:\n    int area();\n};\nint Rectangle :: area(){\n    return (width * height);\n}\nclass Triangle : public Polygon {\npublic:\n    int area();\n};\nint Triangle::area(){\n    return (width * height / 2);\n}\nint main() {\n    Rectangle rect;\n    Triangle trgl;\n    rect.setValues(4, 5);\n    trgl.setValues(4, 5);\n    cout << \"Rectangle area:\" << rect.area() << \" Triangle area:\"<<trgl.area() << endl;\n    return 0;\n}",
+    "options": {
+      "A": "Rectangle area:10 Triangle area:20",
+      "B": "Rectangle area:10 Triangle area:10",
+      "C": "Rectangle area:20 Triangle area:10",
+      "D": "Lỗi biên dịch do lớp Rectangle khai báo kế thừa sai"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q062",
+    "chapter": 3,
+    "questionNumber": 62,
+    "question": "Cho chương trình sau, chương trình sẽ bị lỗi biên dịch tại những dòng lệnh nào? \n1 \n2 class A{\n3 private:\n4    int x;\n5 protected:\n6    int y;\n7 public:\n8    int z;\n9    void print();\n10 };\n11 void A::print(){\n12   cout << x; \n13   cout << y; \n14   cout << z;\n15 }\n16 class B : public A{\n17 public:\n18   void print();\n19 };\n20 void B::print(){\n21   cout << x; \n22   cout << y; \n23   cout << z;\n24 }\n25 int main() {\n26   A ma;\n27   cout << ma.x << endl;\n28   cout << ma.y << endl;\n29   cout << ma.z << endl;\n30   return 0;\n31 }",
+    "options": {
+      "A": "21,27,28",
+      "B": "3,29",
+      "C": "27,28,29",
+      "D": "21,22,23"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q063",
+    "chapter": 3,
+    "questionNumber": 63,
+    "question": "Cho chương trình sau, chương trình sẽ bị lỗi biên dịch tại những dòng lệnh nào? \n1 \n2 class A{\n3 private:\n4    int x;\n5 protected:\n6    int y;\n7 public:\n8    int z;\n9    void print();\n10 };\n11 void A::print(){\n12   cout << x; \n13   cout << y; \n14   cout << z;\n15 }\n16 class B : private A{\n17 public:\n18   void print();\n19 };\n20 void B::print(){\n21   cout << x; \n22   cout << y; \n23   cout << z;\n24 }\n25 int main() {\n26   B mb;\n27   cout << mb.x << endl;\n28   cout << mb.y << endl;\n29   cout << mb.z << endl;\n30   return 0;\n31 }",
+    "options": {
+      "A": "21,27,28,29",
+      "B": "13,29",
+      "C": "27,28,29",
+      "D": "21,22,23"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q064",
+    "chapter": 3,
+    "questionNumber": 64,
+    "question": "Cho chương trình sau, chương trình sẽ bị lỗi biên dịch tại những dòng lệnh nào? \n1 \n2 class A{\n3 private:\n4    int x;\n5 protected:\n6    int y;\n7 public:\n8    int z;\n9    void print();\n10 };\n11 void A::print(){\n12   cout << x; \n13   cout << y; \n14   cout << z;\n15 }\n16 class B : protected A{\n17 public:\n18   void print();\n19 };\n20 void B::print(){\n21   cout << x; \n22   cout << y; \n23   cout << z;\n24 }\n25 int main() {\n26   B mb;\n27   cout << mb.x << endl;\n28   cout << mb.y << endl;\n29   cout << mb.z << endl;\n30   return 0;\n31 }",
+    "options": {
+      "A": "21,27,28,29",
+      "B": "13,29",
+      "C": "27,28,29",
+      "D": "21,22,23"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q065",
+    "chapter": 3,
+    "questionNumber": 65,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass Polygon {\nprotected:\n    int width, height;\npublic:\n    Polygon(int a);\n    void  setValues(int a, int b);\n};\nPolygon::Polygon(int a){\n    width = a;\n}\nvoid Polygon::setValues(int a, int b){\n    width = a;\n    height = b;\n}\nclass Rectangle : public Polygon {\npublic:\n    Rectangle(int w, int h);\n        int area();\n};\nRectangle::Rectangle(int w, int h) :Polygon(w){\n    height = h;\n}\nint Rectangle::area(){\n    return (width * height);\n}\nint main() {\n    Rectangle rect(8, 9);\n    cout << rect.area() << endl;\n    return 0;\n}",
+    "options": {
+      "A": "17",
+      "B": "72",
+      "C": "8",
+      "D": "20"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q066",
+    "chapter": 3,
+    "questionNumber": 66,
+    "question": "Lớp B kế thừa lớp A trong ngôn ngữ C++ được khai báo như thế nào ?",
+    "options": {
+      "A": "class A : public B",
+      "B": "class B extern A",
+      "C": "class B : public A",
+      "D": "class B implements A"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q067",
+    "chapter": 3,
+    "questionNumber": 67,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass Coordinate { \npublic:\n    int n; \n};\nclass Cord { \npublic:\n    Coordinate c; \n};\nvoid main() {\n    Cord x;\n    x.c.n = 10;\n    cout << x.c.n;\n}",
+    "options": {
+      "A": "0",
+      "B": "6",
+      "C": "10",
+      "D": "Lỗi biên dịch tại x.c.n = 10; do biến n và đối tượng c có thuộc tính public nên không được truy cập từ ngoài lớp"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q068",
+    "chapter": 3,
+    "questionNumber": 68,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass ADouble {\n    double value;\npublic:\n    ADouble(double v) { \n        value = v; \n    }\n    void multiply(ADouble d) { \n        value = value * d.value; \n    }\n    void squared() { \n        multiply(*this); \n    }\n    double getValue() const { \n        return value; \n    }\n};\nvoid main() {\n    ADouble x(5.0);\n    x.squared();\n    cout << x.getValue() << '\\n';\n}",
+    "options": {
+      "A": "5",
+      "B": "25",
+      "C": "0",
+      "D": "Lỗi biên dịch do lớp ADouble không có hàm khởi tạo hai tham số"
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q069",
+    "chapter": 3,
+    "questionNumber": 69,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass AInteger {\n    int value;\npublic:\n    AInteger() { \n        value = 0; \n    }\n    AInteger(int i) { \n        value = i; \n    }\n    AInteger(const AInteger &ai) {\n        value = ai.value;\n        cout << \"Copy...\";\n    }\n    AInteger &operator = (const AInteger &ai) {\n        value = ai.value;\n        cout << \" = \";\n        return *this;\n    }\n};\nvoid nothing(AInteger a, AInteger b, AInteger c) { \n}\nvoid main() {\n    AInteger i(5);\n    AInteger j; \n    AInteger k = i;     \n    j = i;  \n    cout << \"nothing...\";\n    nothing(i, j, k);\n}",
+    "options": {
+      "A": "Copy... = nothing...Copy...Copy...Copy...",
+      "B": "Copy...nothing...",
+      "C": "Copy...Copy...",
+      "D": "nothing... = ...Copy..."
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q070",
+    "chapter": 3,
+    "questionNumber": 70,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì? \nclass Base {\n    int na;\npublic:\n    Base(int a = 0) {\n        na = a;\n    }\n    ~Base(){\n        cout << \" \" << na;\n    }\n};\nvoid Func(Base aaa){\n    Base *a1 = new Base(3);\n    delete a1;\n}\nvoid run(){\n    Base aaa(4);\n    Func(aaa);\n}\nvoid main() {\n    run();\n}",
+    "options": {
+      "A": "3 3 4",
+      "B": "0 3 4",
+      "C": "3 4",
+      "D": "3 4 4"
+    },
+    "correctAnswer": "D",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q071",
+    "chapter": 3,
+    "questionNumber": 71,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì? \nclass Base{\npublic:\n    Base(){\n        cout << \"Base class...\";\n    }\n};\nclass Derive :public Base{\npublic:\n    Derive(){\n        cout << \"Derive class...\";\n    }\n};\nvoid main(){\n    Derive d;\n}",
+    "options": {
+      "A": "Base class...",
+      "B": "Base class...Derive class...",
+      "C": "Derive class...Base class...",
+      "D": "Derive class..."
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q072",
+    "chapter": 3,
+    "questionNumber": 72,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì? \nclass Base{\npublic:\n    Base(){\n    }\n    ~Base(){ \n        cout << \"Base class ...\"; \n    }\n};\nclass Derive :Base\n{\npublic:\n    Derive(){\n    }\n    ~Derive(){ \n        cout << \"Derive class...\";\n    }\n};\nvoid run(){\n    Derive d;\n}\nvoid main(){\n    run();\n}",
+    "options": {
+      "A": "Derive class...Base class ...",
+      "B": "Base class ...Derive class...",
+      "C": "Base class ...",
+      "D": "Derive class..."
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q073",
+    "chapter": 3,
+    "questionNumber": 73,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì? \nclass Base\n{\npublic:\n    int xVal;\n    Base(int x = 0) : xVal(x)\n    {\n        cout << xVal <<\"...\";\n    }\n};\nclass Derive :public Base\n{\npublic: \n    Derive()\n    { \n        xVal = 10; \n    }\n    void Print()\n    {\n        cout << xVal <<\"...\";\n    }\n};\nvoid main()\n{\n    Derive d;\n    d.Print();\n}",
+    "options": {
+      "A": "0...10...",
+      "B": "10...0...",
+      "C": "10...",
+      "D": "0..."
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q074",
+    "chapter": 3,
+    "questionNumber": 74,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì? \nclass Base{\nprotected:\n    int xVal;\npublic:\n    Base(){ \n        xVal = 5; \n    }\n    void Print(){\n        cout << xVal ;\n    }\n};\nclass Derive :public Base\n{\npublic:\n    Derive(int x) { \n        xVal = x; \n    }\n};\nvoid main(){\n    Derive d(10);\n    d.Print();\n}",
+    "options": {
+      "A": "5",
+      "B": "10",
+      "C": "Lỗi biên dịch tại d.Print() do hàm Print có thuộc tính public",
+      "D": "Không xuất gì ra màn hình."
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q075",
+    "chapter": 3,
+    "questionNumber": 75,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì? \nclass Base\n{\nprotected:\n    int xVal;\npublic:\n    Base()\n    { \n        xVal = 5; \n    }\n    void Print()\n    {\n        cout << xVal ;\n    }\n};\nclass Derive :protected  Base\n{\npublic:\n    Derive(int x) \n    { \n        xVal = x; \n    }\n};\nvoid main()\n{\n    Derive d(10);\n    d.Print();\n}",
+    "options": {
+      "A": "10",
+      "B": "5",
+      "C": "Lỗi biên dịch tại d.Print() do hàm lớp Derive kế thừa protected lớp Base nên hàm Print có thuộc tính private",
+      "D": "Không xuất gì ra màn hình."
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q076",
+    "chapter": 3,
+    "questionNumber": 76,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì? \nclass A\n{\npublic:\n   A()  { \n    cout << \"A's constructor called...\" ; \n   }\n};\nclass B\n{\npublic:\n   B()  { \n    cout << \"B's constructor called...\"; \n   }\n};\nclass C : public B, public A  \n{\npublic:\n   C()  { \n    cout << \"C's constructor called...\"; \n   }\n};\nint main(){\n    A a;\n    return 0;\n}",
+    "options": {
+      "A": "B's constructor called...A's constructor called...C's constructor called...",
+      "B": "A's constructor called...",
+      "C": "C's constructor called...B's constructor called...C's constructor called...",
+      "D": "A's constructor called...B's constructor called..."
+    },
+    "correctAnswer": "B",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q077",
+    "chapter": 3,
+    "questionNumber": 77,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\nclass A {\npublic:\n    A() {\n        cout << \"Constructing A...\";\n    }\n    ~A(){\n        cout << \"Destructing A...\";\n    }\n};\nclass B {\npublic:\n    B(){\n        cout << \"Constructing B...\";\n    }\n    ~B(){\n        cout << \"Destructing B...\";\n    }\n};\nclass C : public A, public B {\npublic:\n    C(){\n        cout << \"Constructing C...\";\n    }\n    ~C(){\n        cout << \"Destructing C...\";\n    }\n};\nvoid main(){\n    C ob;\n}",
+    "options": {
+      "A": "Constructing A...Constructing B...Constructing C...Destructing C...Destructing B...Destructing A...",
+      "B": "Constructing A...Constructing B...Constructing C...",
+      "C": "Constructing C...Destructing C...",
+      "D": "Constructing A...Constructing B...Constructing C...Destructing C..."
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q078",
+    "chapter": 3,
+    "questionNumber": 78,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì?\n1 \n2 class A{\n3 public:\n4   int x;\n5   int y;\n6   int z;\n7   void print();\n8    \n9    \n10 };\n11 void A::print(){\n12   cout << x; \n13   cout << y; \n14   cout << z;\n15 }\n16 class B : public A{\n17 public:\n18   void print();\n19 };\n20 void B::print(){\n21   cout << x; \n22   cout << y; \n23   cout << z;\n24 }\n25 int main() {\n26   A ma;\n27   cout << ma.x << endl;\n28   cout << ma.y << endl;\n29   cout << ma.z << endl;\n30   return 0;\n31 }",
+    "options": {
+      "A": "Chương trình sẽ bị lỗi biên dịch tại dòng lệnh 21,27,28",
+      "B": "Chương trình sẽ bị lỗi biên dịch tại dòng lệnh 13,29",
+      "C": "Chương trình không bị lỗi biên dịch",
+      "D": "Chương trình sẽ bị lỗi biên dịch tại dòng lệnh 21,22,23"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q079",
+    "chapter": 3,
+    "questionNumber": 79,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì? \ntemplate <class T>\nclass Test {\n    T x, y;\npublic:\n    Test(T a = 0, T b = 0) {\n        x = b; \n        y = a;\n    }\n    void display();\n};\ntemplate <class T>\nvoid Test<T>::display() {\n    cout << \"(\" << x << \",\" << y << \") \";\n}\nvoid main() {\n    Test<int> ti(3, 5); \n    ti.display();\n    Test<char> tc('a', 'b'); \n    tc.display();\n}",
+    "options": {
+      "A": "(5,3) (b,a)",
+      "B": "(3,5) (a,b)",
+      "C": "(5,3)",
+      "D": "(b,a)"
+    },
+    "correctAnswer": "A",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  },
+  {
+    "id": "CH3-Q080",
+    "chapter": 3,
+    "questionNumber": 80,
+    "question": "Cho chương trình viết bằng ngôn ngữ C++ như sau, khi biên dịch và thực thi chương trình, có kết quả là gì? \nclass Shape {\npublic:\n    void setWidth(int w) {\n        width = w;\n    }\n    void setHeight(int h) {\n        height = h;\n    }\nprotected:\n    int width;\n    int height;\n};\nclass Rectangle : public Shape {\npublic:\n    int getArea() {\n        return (width * height);\n    }\n};\nint main(void) {\n    Rectangle rect;\n    rect.setWidth(5);\n    rect.setHeight(7);  \n    cout << \"Total area: \" << rect.getArea() << endl;\n    return 0;\n}",
+    "options": {
+      "A": "Total area: 7",
+      "B": "Total area: 5",
+      "C": "Total area: 35",
+      "D": "Total area: 25"
+    },
+    "correctAnswer": "C",
+    "explanation": "",
+    "difficulty": "medium",
+    "tags": []
+  }
+]
