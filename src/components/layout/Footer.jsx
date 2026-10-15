@@ -7,7 +7,7 @@ export const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-slate-500 dark:text-slate-400">
           <div className="flex items-center gap-2">
-            <span className="font-semibold text-slate-700 dark:text-slate-200">OPP QUIZ</span>
+            <span className="font-semibold text-slate-700 dark:text-slate-200">OOP QUIZ</span>
             <span>•</span>
             <span>Hệ thống Ôn tập & Thi thử Trắc nghiệm Lập trình Hướng đối tượng</span>
           </div>

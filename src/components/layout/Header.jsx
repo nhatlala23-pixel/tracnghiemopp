@@ -62,7 +62,7 @@ export const Header = () => {
             </div>
             <div>
               <span className="text-xl font-extrabold tracking-tight bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-500 bg-clip-text text-transparent">
-                OPP QUIZ
+                OOP QUIZ
               </span>
               <span className="hidden sm:inline-block ml-2 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-blue-700 bg-blue-50 dark:text-blue-300 dark:bg-blue-950/60 rounded-md border border-blue-200/50 dark:border-blue-800/50">
                 6 CHƯƠNG ({totalQuestions} CÂU)

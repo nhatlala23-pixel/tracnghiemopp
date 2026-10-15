@@ -86,7 +86,7 @@ export const Quiz = () => {
         <p className="text-sm text-slate-500 dark:text-slate-400 mb-6">
           {totalAvailable < 90
             ? `Ngân hàng câu hỏi hiện có ${totalAvailable} câu. Bạn có thể thêm câu hỏi thật vào các file chapter01.json → chapter06.json hoặc vào phần "Ôn tập 6 Chương" để làm bài.`
-            : 'Bạn có thể bắt đầu bài thi thử 90 câu chuẩn kỳ thi OPP hoặc quay lại trang chủ.'}
+            : 'Bạn có thể bắt đầu bài thi thử 90 câu chuẩn kỳ thi OOP hoặc quay lại trang chủ.'}
         </p>
         <div className="flex items-center justify-center gap-3">
           <button
@@ -130,12 +130,12 @@ export const Quiz = () => {
       <QuizHeader
         title={
           activeSession.mode === QUIZ_MODES.EXAM
-            ? 'Đề thi trắc nghiệm OPP (90 câu - 90 phút)'
+            ? 'Đề thi trắc nghiệm OOP (90 câu - 90 phút)'
             : activeSession.mode === QUIZ_MODES.WRONG_RETRIAL
             ? 'Làm lại các câu hỏi sai'
             : activeSession.chapter && activeSession.chapter !== 'all'
             ? `Ôn tập Chương ${activeSession.chapter}`
-            : 'Luyện tập câu hỏi OPP'
+            : 'Luyện tập câu hỏi OOP'
         }
         currentIndex={currentIndex}
         totalQuestions={questions.length}

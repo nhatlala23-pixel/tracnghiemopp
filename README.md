@@ -1,4 +1,4 @@
-# 🎓 OPP Quiz - Website Ôn Tập & Thi Trắc Nghiệm Lập Trình Hướng Đối Tượng
+# 🎓 OOP Quiz - Website Ôn Tập & Thi Trắc Nghiệm Lập Trình Hướng Đối Tượng
 
 Website tĩnh ôn tập và thi trắc nghiệm môn **Lập trình hướng đối tượng (OOP)** dành cho sinh viên. Hệ thống hoạt động 100% Client-side, không cần backend, không cần database, lưu trữ tiến trình qua `localStorage`.
 
@@ -45,8 +45,8 @@ Website tĩnh ôn tập và thi trắc nghiệm môn **Lập trình hướng đ�
 
 1. **Clone repository:**
    ```bash
-   git clone https://github.com/nhatlala23-pixel/tracnghiemopp.git
-   cd tracnghiemopp
+   git clone https://github.com/nhatlala23-pixel/tracnghiemoop.git
+   cd tracnghiemoop
    ```
 
 2. **Cài đặt thư viện:**

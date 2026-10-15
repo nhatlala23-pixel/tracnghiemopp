@@ -70,11 +70,11 @@ export const Dashboard = () => {
         <div className="relative z-10 max-w-2xl">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 backdrop-blur-md text-xs font-semibold mb-3">
             <Sparkles className="w-3.5 h-3.5 text-amber-300" />
-            <span>Hệ thống luyện thi trắc nghiệm OPP – 6 Chương học phần</span>
+            <span>Hệ thống luyện thi trắc nghiệm OOP – 6 Chương học phần</span>
           </div>
 
           <h1 className="text-2xl sm:text-4xl font-extrabold tracking-tight leading-tight">
-            Ôn tập OPP – Sẵn sàng cho kỳ thi
+            Ôn tập OOP – Sẵn sàng cho kỳ thi
           </h1>
           <p className="mt-2 text-sm sm:text-base text-blue-100 font-normal leading-relaxed">
             Ngân hàng {totalQuestions} câu hỏi – luyện tập thông minh theo từng chương – theo dõi tiến độ chính xác.
@@ -120,7 +120,7 @@ export const Dashboard = () => {
         <StatCard
           title="Tổng số câu hỏi"
           value={stats.totalQuestions}
-          subtext="6 chương học phần OPP"
+          subtext="6 chương học phần OOP"
           icon={HelpCircle}
           color="blue"
         />
@@ -157,13 +157,13 @@ export const Dashboard = () => {
         percent={stats.progressPercent}
       />
 
-      {/* Thống kê chi tiết theo 6 Chương môn OPP */}
+      {/* Thống kê chi tiết theo 6 Chương môn OOP */}
       <div className="bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-200/80 dark:border-slate-800 shadow-sm">
         <div className="flex items-center justify-between mb-6 pb-4 border-b border-slate-100 dark:border-slate-800">
           <div>
             <h3 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
               <Layers className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-              Thống kê học tập theo 6 Chương OPP
+              Thống kê học tập theo 6 Chương OOP
             </h3>
             <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-0.5">
               Phân tích tỷ lệ câu làm đúng và tiến độ học cho từng chương học phần.

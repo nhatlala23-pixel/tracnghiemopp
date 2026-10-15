@@ -92,7 +92,7 @@ export const Practice = () => {
           <div>
             <h1 className="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white flex items-center gap-2.5">
               <BookOpen className="w-6 h-6 text-blue-600 dark:text-blue-400" />
-              Ôn tập theo 6 Chương OPP
+              Ôn tập theo 6 Chương OOP
             </h1>
             <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">
               Số lượng câu hỏi được tự động cập nhật từ các chương trong hệ thống.

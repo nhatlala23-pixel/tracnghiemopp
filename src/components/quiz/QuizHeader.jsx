@@ -3,7 +3,7 @@ import { Send } from 'lucide-react';
 import QuizTimer from './QuizTimer';
 
 export const QuizHeader = ({
-  title = 'Đề thi OPP',
+  title = 'Đề thi OOP',
   currentIndex = 0,
   totalQuestions = 90,
   formattedTime,

@@ -6,7 +6,7 @@ import chapter05 from './questions/chapter05.json';
 import chapter06 from './questions/chapter06.json';
 
 /**
- * Thông tin định danh 6 chương học phần môn OPP
+ * Thông tin định danh 6 chương học phần môn OOP
  */
 export const CHAPTERS_INFO = [
   { chapter: 1, name: 'Chương 1: Tổng quan & Khái niệm OOP', shortName: 'Chương 1' },

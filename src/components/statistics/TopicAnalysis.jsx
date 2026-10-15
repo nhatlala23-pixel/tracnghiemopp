@@ -11,7 +11,7 @@ export const TopicAnalysis = ({ chapterAnalysis = [] }) => {
           Phân tích chi tiết theo 6 Chương học phần
         </h3>
         <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">
-          Đánh giá dựa trên tỷ lệ câu trả lời đúng của bạn trong từng chương môn OPP.
+          Đánh giá dựa trên tỷ lệ câu trả lời đúng của bạn trong từng chương môn OOP.
         </p>
       </div>
 

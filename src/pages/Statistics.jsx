@@ -85,7 +85,7 @@ export const Statistics = () => {
             Thống kê học tập cá nhân
           </h1>
           <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">
-            Theo dõi sự tiến bộ, điểm số và tần suất luyện tập trắc nghiệm 6 chương OPP của bạn.
+            Theo dõi sự tiến bộ, điểm số và tần suất luyện tập trắc nghiệm 6 chương OOP của bạn.
           </p>
         </div>
 
@@ -157,7 +157,7 @@ export const Statistics = () => {
           <h3 className="text-base font-bold text-slate-900 dark:text-white mb-2">
             Độ chính xác theo 6 Chương học phần (%)
           </h3>
-          <p className="text-xs text-slate-400 mb-4">Mức độ hiểu bài trong từng chương môn OPP</p>
+          <p className="text-xs text-slate-400 mb-4">Mức độ hiểu bài trong từng chương môn OOP</p>
           <div className="w-full h-72">
             {chapterProgress?.chartData ? (
               <Bar data={chapterProgress.chartData} options={chartOptions} />

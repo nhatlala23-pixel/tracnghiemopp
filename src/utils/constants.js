@@ -3,13 +3,13 @@ export const QUIZ_DURATION = 90 * 60; // 90 phút = 5400 giây
 export const TOTAL_CHAPTERS = 6;
 
 export const STORAGE_KEYS = {
-  PROGRESS: 'opp_questions_progress',
-  HISTORY: 'opp_quiz_history',
-  WRONG_QUESTIONS: 'opp_wrong_questions',
-  BOOKMARKS: 'opp_bookmarks',
-  CURRENT_QUIZ: 'opp_current_quiz',
-  STATISTICS: 'opp_statistics',
-  THEME: 'opp_theme',
+  PROGRESS: 'oop_questions_progress',
+  HISTORY: 'oop_quiz_history',
+  WRONG_QUESTIONS: 'oop_wrong_questions',
+  BOOKMARKS: 'oop_bookmarks',
+  CURRENT_QUIZ: 'oop_current_quiz',
+  STATISTICS: 'oop_statistics',
+  THEME: 'oop_theme',
 };
 
 export const QUIZ_MODES = {
